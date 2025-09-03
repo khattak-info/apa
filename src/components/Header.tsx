@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import apaLogo from "../images/apa-logo.jpeg";
 
 function Header() {
   const location = useLocation();
@@ -23,7 +24,7 @@ function Header() {
             <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-xl">
                 <img
-                  src="/images/apa-logo.jpeg"
+                  src={apaLogo}
                   alt="Australian Pashtun Association logo featuring a green and gold circular emblem with Pashto script, conveying a welcoming and community-focused atmosphere"
                   className="w-8 h-8"
                 />
