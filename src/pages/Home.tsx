@@ -25,7 +25,7 @@ function Home() {
                 Become a Member
               </Link>
               <Link
-                to="/donations"
+                to="/contact"
                 className="bg-white text-green-700 border-2 border-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
               >
                 Support Our Cause
