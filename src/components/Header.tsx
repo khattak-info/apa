@@ -10,7 +10,7 @@ function Header() {
     { name: "About Us", href: "/about" },
     { name: "Membership", href: "/membership" },
     { name: "Events", href: "/events" },
-    { name: "Donations", href: "/donations" },
+    // { name: "Donations", href: "/donations" },
     { name: "Contact", href: "/contact" },
   ];
 

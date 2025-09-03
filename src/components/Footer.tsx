@@ -88,7 +88,7 @@ function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Australian Pashtun Association. All rights reserved.
+            © 2025 Australian Pashtun Association. All rights reserved.
           </p>
         </div>
       </div>
