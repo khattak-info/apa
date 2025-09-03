@@ -21,7 +21,13 @@ function Header() {
           {/* Logo and Title */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">APA</span>
+              <span className="text-white font-bold text-xl">
+                <img
+                  src="/images/apa-logo.jpeg"
+                  alt="Australian Pashtun Association logo featuring a green and gold circular emblem with Pashto script, conveying a welcoming and community-focused atmosphere"
+                  className="w-8 h-8"
+                />
+              </span>
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">Australian Pashtun Association</h1>
