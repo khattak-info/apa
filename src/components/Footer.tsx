@@ -49,8 +49,8 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/donations" className="text-gray-300 hover:text-white transition-colors">
-                  Donations
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -62,7 +62,7 @@ function Footer() {
             <div className="space-y-2 text-gray-300">
               <p className="text-sm">
                 <span className="block font-medium">Email:</span>
-                info@australianpashtunassociation.org
+                info@pashtun.org.au
               </p>
               <p className="text-sm">
                 <span className="block font-medium">Phone:</span>
