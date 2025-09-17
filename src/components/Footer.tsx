@@ -66,7 +66,7 @@ function Footer() {
               </p>
               <p className="text-sm">
                 <span className="block font-medium">Phone:</span>
-                +61 (0) 123 456 789
+                +61 0432-800-789
               </p>
               <div className="flex space-x-4 mt-4">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
