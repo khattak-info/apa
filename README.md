@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+```markdown
+# Project Overview
+- **Project**: Australian Pashtun Association Website - A website for the Australian Pashtun Association, a not-for-profit community organization supporting Pashtuns in Australia.
+- **Tech Stack**: Not specified
+- **Environment**: Not specified
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Theme, Style, and Vibe
+- **Theme**: Community support and cultural preservation
+- **Style**: Green and blue color scheme reflecting the organization's cultural identity
+- **Vibe**: Emphasizes community support and cultural identity, featuring both English and Pashto text
 
-Currently, two official plugins are available:
+# Conversation Context
+- **Last Topic**: Not specified
+- **Key Decisions**: Not specified
+- **User Context**:
+  - Technical Level: Not specified
+  - Preferences: Not specified
+  - Communication: Not specified
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Implementation Status
+## Current State
+- **Active Feature**: Not specified
+- **Progress**: Not specified
+- **Blockers**: Not specified
 
-## Expanding the ESLint configuration
+## Code Evolution
+- **Recent Changes**: Not specified
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Requirements
+- **Implemented**: Pages for Home, About Us, Membership, Events, Donations, and Contact; funeral trust fund for premium members; Pashto language and culture preservation; youth empowerment programs; community events
+- **In Progress**: Not specified
+- **Pending**: Not specified
+- **Technical Constraints**: Not specified
 
-- Configure the top-level `parserOptions` property like this:
+# Critical Memory
+- **Must Preserve**: Famous Pashto quote about the language
+- **User Requirements**: Support for both English and Pashto text
+- **Known Issues**: Not specified
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+# Next Actions
+- **Immediate**: Not specified
+- **Future**: Not specified
 ```
