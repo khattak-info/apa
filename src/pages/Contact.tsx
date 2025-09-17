@@ -20,7 +20,7 @@ function Contact() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-50 p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Send Us a Message</h2>
-            <form name="contact" method="POST" data-netlify="true" className="space-y-6">
+            <form name="contact" method="POST" data-netlify="true" className="space-y-6" netlify>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Your Name
