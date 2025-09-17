@@ -20,26 +20,76 @@ function Contact() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-50 p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Send Us a Message</h2>
-            <form name="contact" method="POST" data-netlify="true">
-              <p>
-                <label>Your Name: <input type="text" name="name" /></label>
-              </p>
-              <p>
-                <label>Your Email: <input type="email" name="email" /></label>
-              </p>
-              <p>
-                <label>Question Regarding: <select name="role[]" multiple>
+            <form name="contact" method="POST" data-netlify="true" className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                  placeholder="Enter your full name"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  Question Regarding
+                </label>
+                <select
+                  name="subject"
+                  id="subject"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                >
+                  <option value="">Select a topic</option>
                   <option value="membership">Membership</option>
                   <option value="events">Events</option>
                   <option value="volunteering">Volunteering</option>
-                </select></label>
-              </p>
-              <p>
-                <label>Message: <textarea name="message"></textarea></label>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
+                  <option value="general">General Inquiry</option>
+                  <option value="support">Community Support</option>
+                </select>
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows={6}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors resize-vertical"
+                  placeholder="Please provide details about your inquiry..."
+                />
+              </div>
+              
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                >
+                  Send Message
+                </button>
+              </div>
             </form>
             <p className="text-xs text-gray-400 mt-6 text-center">We respect your privacy. Your information will only be used to respond to your inquiry.</p>
           </div>
