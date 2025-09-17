@@ -51,7 +51,7 @@ function Contact() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Other Ways to Contact</h2>
           <p className="text-gray-700 mb-2">Email: <a href="mailto:info@pashtun.org.au" className="text-green-700 underline">info@pashtun.org.au</a></p>
-          <p className="text-gray-700 mb-2">Phone: <span className="text-green-700">+61 400 000 000</span></p>
+          <p className="text-gray-700 mb-2">Phone: <span className="text-green-700">+61 432-800-789</span></p>
           <p className="text-gray-700">Address: <span className="text-green-700">Sydney, NSW, Australia</span></p>
         </div>
       </section>
