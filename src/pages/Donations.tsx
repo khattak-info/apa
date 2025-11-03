@@ -16,6 +16,24 @@ function Donations() {
         </div>
       </section>
 
+    {/* Call to Action */}
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-4">Donate Generously</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Donate and become part of a vibrant Pashtun community dedicated to preserving Pashtun culture and supporting each other in Australia.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="https://www.paypal.com/donate/?hosted_button_id=U7THYLLMGQDYY"
+              className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors"
+            >
+              Donate Today
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Our Purposes */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -116,23 +134,6 @@ function Donations() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-    {/* Call to Action */}
-      <section className="py-16 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Donate Generously</h2>
-          <p className="text-lg text-gray-300 mb-8">
-            Donate and become part of a vibrant Pashtun community dedicated to preserving Pashtun culture and supporting each other in Australia.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="https://www.paypal.com/donate/?hosted_button_id=U7THYLLMGQDYY"
-              className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors"
-            >
-              Donate Today
-            </Link>
           </div>
         </div>
       </section>
