@@ -8,11 +8,11 @@ function Header() {
 
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Membership", href: "/membership" },
+    { name: "About Us", href: "/about" },    
     { name: "Events", href: "/events" },
-    // { name: "Donations", href: "/donations" },
+    { name: "Donations", href: "/donations" },
     { name: "Contact", href: "/contact" },
+    { name: "Membership", href: "/membership" },
   ];
 
   return (

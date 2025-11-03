@@ -16,6 +16,74 @@ function Membership() {
         </div>
       </section>
 
+      {/* Eligibility Requirements */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Eligibility Requirements</h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-lg shadow-md mb-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Standard Eligibility</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Who Can Apply:</h4>
+                  <ul className="text-gray-600 space-y-2">
+                    <li className="flex items-start space-x-2">
+                      <span className="text-green-600 mt-1">•</span>
+                      <span>Individuals who are Pashtun by birth</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <span className="text-green-600 mt-1">•</span>
+                      <span>Individuals married to a Pashtun</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Additional Requirements:</h4>
+                  <ul className="text-gray-600 space-y-2">
+                    <li className="flex items-start space-x-2">
+                      <span className="text-green-600 mt-1">•</span>
+                      <span>Head of family must be a member of the Executive Council (for Premium Membership)</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <span className="text-green-600 mt-1">•</span>
+                      <span>Commitment to upholding Pashtunwali values</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="bg-blue-50 p-8 rounded-lg border border-blue-200">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Special Category Applications</h3>
+              <p className="text-gray-600 mb-4">
+                We welcome applications from individuals who may not meet the standard eligibility criteria but have a genuine connection to or interest in supporting the Pashtun community.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">This includes:</h4>
+                  <ul className="text-gray-600 space-y-2">
+                    <li className="flex items-start space-x-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span>Non-Australian citizens or permanent residents</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span>Non-Pashtun individuals with community connections</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Review Process:</h4>
+                  <p className="text-gray-600 text-sm">
+                    All special category applications are carefully reviewed by our Executive Committee on a case-by-case basis to ensure alignment with our community values and objectives.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Membership Tiers */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,74 +209,6 @@ function Membership() {
         </div>
       </section>
 
-      {/* Eligibility Requirements */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Eligibility Requirements</h2>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-md mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Standard Eligibility</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Who Can Apply:</h4>
-                  <ul className="text-gray-600 space-y-2">
-                    <li className="flex items-start space-x-2">
-                      <span className="text-green-600 mt-1">•</span>
-                      <span>Individuals who are Pashtun by birth</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-green-600 mt-1">•</span>
-                      <span>Individuals married to a Pashtun</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Additional Requirements:</h4>
-                  <ul className="text-gray-600 space-y-2">
-                    <li className="flex items-start space-x-2">
-                      <span className="text-green-600 mt-1">•</span>
-                      <span>Head of family must be a member of the Executive Council (for Premium Membership)</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-green-600 mt-1">•</span>
-                      <span>Commitment to upholding Pashtunwali values</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-blue-50 p-8 rounded-lg border border-blue-200">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Special Category Applications</h3>
-              <p className="text-gray-600 mb-4">
-                We welcome applications from individuals who may not meet the standard eligibility criteria but have a genuine connection to or interest in supporting the Pashtun community.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">This includes:</h4>
-                  <ul className="text-gray-600 space-y-2">
-                    <li className="flex items-start space-x-2">
-                      <span className="text-blue-600 mt-1">•</span>
-                      <span>Non-Australian citizens or permanent residents</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-blue-600 mt-1">•</span>
-                      <span>Non-Pashtun individuals with community connections</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Review Process:</h4>
-                  <p className="text-gray-600 text-sm">
-                    All special category applications are carefully reviewed by our Executive Committee on a case-by-case basis to ensure alignment with our community values and objectives.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* How to Join */}
       <section className="py-16 bg-white">
@@ -216,14 +216,25 @@ function Membership() {
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">How to Join</h2>
           
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"> 
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-green-700">1</span>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Complete Application</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Pay Membership Fee</h3>
                 <p className="text-gray-600 text-sm">
-                  Fill out our membership application form with your personal details and membership tier preference.
+                  Submit the applicable membership fee based on your chosen tier and membership category for each member of your family. 
+                  If this is your first time applying, please pay the one-time registration fee for Premium Membership for each family, this includes the General Membership fee for current year.
+                  Alternatively, if you are renewing your membership only then you need to pay the General Membership for each family member. 
+                  Remember to keep the payment receipt for your records and submit it with your application along with proof of identity.
+                  <div>
+                    <style>.pp-QJ8NM22QMW2N2{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+                    <form action="https://www.paypal.com/ncp/payment/QJ8NM22QMW2N2" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                      <input class="pp-QJ8NM22QMW2N2" type="submit" value="Buy Now" />
+                      <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                      <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+                    </form>
+                  </div>
                 </p>
               </div>
 
@@ -231,11 +242,16 @@ function Membership() {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-green-700">2</span>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Pay Membership Fee</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Complete Application</h3>
                 <p className="text-gray-600 text-sm">
-                  Submit the applicable membership fee based on your chosen tier and membership category.
+                  Fill out our membership application form with your personal details and membership tier preference.
+                  You will be required to provide payment proof, proof of identity and any other necessary documentation as specified in the form.
+                  Please add information for all family members applying for membership. 
+                  The form also provides members to add details in a PDF format, which will be submitted along with the application on the same form.
+                  Australian Pashtun Association reserves the right to accept or reject any application at its discretion.                  
                 </p>
               </div>
+
 
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -243,7 +259,11 @@ function Membership() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Receive Approval</h3>
                 <p className="text-gray-600 text-sm">
-                  Your application will be reviewed by our Executive Committee and you'll receive formal approval notification.
+                  All submitted applications will be reviewed by our Executive Committee and you'll receive formal approval notification within three working days.
+                  Please ensure all submitted information is accurate to avoid delays. It will be appreciated if you ensure you have added the payment receipt, 
+                  proof of identity and family details documentation as specified in the form.
+                  Your application may be subject to additional review, and you may be contacted for further information.
+                  Once approved, you'll gain access to all the benefits associated with your membership tier.
                 </p>
               </div>
             </div>
@@ -256,10 +276,10 @@ function Membership() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors">
-                    Download Application Form
+                    Family Data Document
                   </button>
                   <Link
-                    to="/contact"
+                    to="https://drive.google.com/file/d/1NZN-2zufX15oV46q5KbN-p4U5G3GHeor/view?usp=sharing"
                     className="bg-white text-green-700 border-2 border-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                   >
                     Contact Us for Questions

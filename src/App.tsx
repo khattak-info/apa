@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Membership from "./pages/Membership";
 import Events from "./pages/Events";
-// import Donations from "./pages/Donations";
+import Donations from "./pages/Donations";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -14,10 +14,10 @@ function App() {
         {/* Define all routes here */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/membership" element={<Membership />} />
         <Route path="/events" element={<Events />} />
-        {/* <Route path="/donations" element={<Donations />} /> */}
+        <Route path="/donations" element={<Donations />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/membership" element={<Membership />} />
 
         {/* IMPORTANT: DO NOT place any routes below this. */}
         <Route path="*" element={<NotFound />} />
