@@ -24,8 +24,10 @@ function Donations() {
             Donate and become part of a vibrant Pashtun community dedicated to preserving Pashtun culture and supporting each other in Australia.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="https://www.paypal.com/donate/?hosted_button_id=U7THYLLMGQDYY"
+            <a
+              href="https://www.paypal.com/donate/?hosted_button_id=U7THYLLMGQDYY"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors"
             >
               Donate Today
@@ -40,8 +42,7 @@ function Donations() {
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Purposes</h2>
           
           {/* Main Purposes */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">Main Purposes</h3>
+          <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">Main Purposes</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-green-50 p-6 rounded-lg">
                 <div className="flex items-start space-x-4">
@@ -107,7 +108,6 @@ function Donations() {
                 </div>
               </div>
             </div>
-          </div>
 
           {/* Other Purposes */}
           <div>

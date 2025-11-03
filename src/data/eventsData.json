@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Nowruz Celebration 2024",
+    "date": "March 21, 2024",
+    "time": "6:00 PM - 10:00 PM",
+    "location": "Community Center, Melbourne",
+    "category": "Cultural",
+    "description": "Join us for the traditional New Year celebration with cultural performances, traditional food, and community activities. Experience the joy of spring and new beginnings with fellow community members.",
+    "memberDiscount": true,
+    "image": "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    "id": 2,
+    "title": "Pashto Poetry Evening",
+    "date": "April 15, 2024",
+    "time": "7:00 PM - 9:30 PM",
+    "location": "Cultural Hall, Sydney",
+    "category": "Cultural",
+    "description": "An evening of Pashto poetry, storytelling, and literary discussions celebrating our rich literary heritage. Local poets and storytellers will share their work and engage with the community.",
+    "memberDiscount": true,
+    "image": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    "id": 3,
+    "title": "International Pashto Day",
+    "date": "May 8, 2024",
+    "time": "2:00 PM - 6:00 PM",
+    "location": "University Auditorium, Brisbane",
+    "category": "Educational",
+    "description": "Celebrating the beauty and importance of the Pashto language with educational workshops, language classes, and cultural activities for all ages.",
+    "memberDiscount": true,
+    "image": "https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    "id": 4,
+    "title": "Youth Leadership Workshop",
+    "date": "June 12, 2024",
+    "time": "10:00 AM - 4:00 PM",
+    "location": "Conference Center, Perth",
+    "category": "Youth",
+    "description": "A comprehensive workshop designed to empower young Pashtuns with leadership skills, career guidance, and networking opportunities with successful community members.",
+    "memberDiscount": true,
+    "image": "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    "id": 5,
+    "title": "Eid ul-Fitr Community Gathering",
+    "date": "April 10, 2024",
+    "time": "11:00 AM - 3:00 PM",
+    "location": "Park Pavilion, Adelaide",
+    "category": "Community",
+    "description": "Celebrate Eid ul-Fitr with the entire community. Join us for prayers, traditional feast, children's activities, and community bonding in a festive atmosphere.",
+    "memberDiscount": false,
+    "image": "https://images.pexels.com/photos/8828489/pexels-photo-8828489.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    "id": 6,
+    "title": "Cultural Heritage Workshop",
+    "date": "July 20, 2024",
+    "time": "1:00 PM - 5:00 PM",
+    "location": "Museum Hall, Canberra",
+    "category": "Educational",
+    "description": "Learn about Pashtun history, traditions, and cultural practices through interactive workshops, exhibitions, and presentations by cultural experts.",
+    "memberDiscount": true,
+    "image": "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800"
+  }
+]
