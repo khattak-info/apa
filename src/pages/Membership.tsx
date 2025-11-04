@@ -109,9 +109,10 @@ function Membership() {
                   <span className="text-lg font-normal text-gray-600"> initial</span>
                 </div>
                 <div className="text-lg text-gray-600">
-                  + AUD $20 annual renewal per family member
+                  AUD $20 annual renewal per family member from next year of membership.
                 </div>
                 <p className="text-sm text-gray-500 mt-1">*Effective from August 1, 2025</p>
+                <p className="text-sm text-gray-500">Non-refundable one time fee</p>
               </div>
 
               <div className="mb-8">
@@ -166,6 +167,9 @@ function Membership() {
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   AUD $20
                   <span className="text-lg font-normal text-gray-600"> annually</span>
+                </div>
+                <div className="text-lg text-gray-600">
+                  Premium Membership is required for annual renewal, AUD $20 annual renewal per family member for every year of membership.
                 </div>
                 <p className="text-sm text-gray-500 mt-1">*Effective from August 1, 2025</p>
                 <p className="text-sm text-gray-500">Non-refundable annual fee</p>
