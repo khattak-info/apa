@@ -151,7 +151,7 @@ function Membership() {
               </div>
 
               <button className="w-full bg-green-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-800 transition-colors">
-                Apply for Premium Membership
+                <Link to="#process">Apply for Premium Membership</Link>
               </button>
             </div>
 
@@ -198,122 +198,98 @@ function Membership() {
                     </svg>
                     <span className="text-gray-700">Regular community updates and newsletters</span>
                   </li>
+                   <li className="flex items-start space-x-3">
+                    <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-gray-700">Contribution to the betterment of Pashtun Society</span>
+                  </li>
                 </ul>
               </div>
 
               <button className="w-full bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
-                Apply for General Membership
+                <Link to="#process">Apply for Premium Membership</Link>
+              </button>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Membership Process */}
+      <section id="process" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Membership Process</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-justify-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-green-700">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Pay Membership Fee</h3>
+              <ul className="list-disc list-inside">
+                    <li>Submit the applicable membership fee based on your chosen tier and membership category for each member of your family.</li>
+                    <li>If this is your first time applying, please pay the one-time registration fee for Premium Membership for each family, this includes the General Membership fee for current year.</li>
+                    <li>Alternatively, if you are renewing your membership only then you need to pay the General Membership for each family member.</li>
+                    <li>Remember to keep the payment receipt for your records and submit it with your application along with proof of identity.</li>
+              </ul>
+              <div className="mt-4">
+                <form className="w-full bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors"
+                  action="https://www.paypal.com/ncp/payment/QJ8NM22QMW2N2"
+                  method="post"
+                  target="_blank"
+                  style={{ display: 'inline' }}
+                >
+                  <input type="submit" value="Step 1 - Pay Membership Fee Through Paypal" />
+                </form>
+              </div>
+            </div>
+
+            <div className="text-justify-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-700">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Provide Members and Family Data</h3>
+               <ul className="list-disc list-inside">
+                    <li>Fill out our membership application form with your personal details and membership tier preference.</li>
+                    <li>You will be required to provide payment proof, proof of identity and any other necessary documentation as specified in the form.</li>
+                    <li>Please add information for all family members applying for membership.</li>
+                    <li>The form also provides members to add details in a PDF format, which will be submitted along with the application on the same form.</li>
+                    <li>Australian Pashtun Association reserves the right to accept or reject any application at its discretion.</li>
+                </ul>
+              <button className="w-full bg-blue-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors">                
+                <a href="https://drive.google.com/file/d/1NZN-2zufX15oV46q5KbN-p4U5G3GHeor/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="ml-2 underline">Membership Data Form</a>
+              </button>
+            </div>
+
+            <div className="text-justify-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-purple-700">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Submit Application</h3>
+              <ul className="list-disc list-inside">
+                    <li>All submitted applications will be reviewed by our Executive Committee and you'll receive formal approval notification within three working days.</li>
+                    <li>Please ensure all submitted information is accurate to avoid delays. It will be appreciated if you ensure you have added the payment receipt, proof of identity and family details documentation as specified in the form.</li>
+                    <li>Your application may be subject to additional review, and you may be contacted for further information.</li>
+                    <li>Once approved, you'll gain access to all the benefits associated with your membership tier.</li>
+              </ul>
+              <button className="w-full bg-purple-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-900 transition-colors">                
+                <a href="https://forms.gle/bworYx7nfG829cNH7" target="_blank" rel="noopener noreferrer" className="ml-2 underline">Membership Data Form</a>
               </button>
             </div>
           </div>
         </div>
       </section>
 
-
-      {/* How to Join */}
+      {/* Need Help with the application Process */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">How to Join</h2>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"> 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-700">1</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Pay Membership Fee</h3>
-                <div className="text-gray-600 text-sm">
-                  <span className="font-semibold">Important:</span>
-                  <ul className="list-disc list-inside">
-                    <li>Submit the applicable membership fee based on your chosen tier and membership category for each member of your family.</li>
-                    <li>If this is your first time applying, please pay the one-time registration fee for Premium Membership for each family, this includes the General Membership fee for current year.</li>
-                    <li>Alternatively, if you are renewing your membership only then you need to pay the General Membership for each family member.</li>
-                    <li>Remember to keep the payment receipt for your records and submit it with your application along with proof of identity.</li>
-                  </ul>
-                  <div>
-                    <style>{`
-                      .pp-QJ8NM22QMW2N2 {
-                        text-align: center;
-                        border: none;
-                        border-radius: 0.25rem;
-                        min-width: 11.625rem;
-                        padding: 0.5rem;
-                      }
-                      `}</style>
-
-                      <form
-                        action="https://www.paypal.com/ncp/payment/QJ8NM22QMW2N2"
-                        method="post"
-                        target="_blank"
-                        style={{ display: 'inline' }}
-                      >
-                        <input className="pp-QJ8NM22QMW2N2" type="submit" value="Pay Membership Fee Through Paypal" />
-                      </form>
-
-                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <a
-                        href="https://www.paypal.com/ncp/payment/QJ8NM22QMW2N2"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors"
-                      >Pay Membership Fee Through Paypal</a>
-                      </div>
-                   </div>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-700">2</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Complete Application</h3>
-                <div className="text-gray-600 text-sm">
-                  <span className="font-semibold">Important:</span>
-                  <ul className="list-disc list-inside">
-                    <li>Fill out our membership application form with your personal details and membership tier preference.</li>
-                    <li>You will be required to provide payment proof, proof of identity and any other necessary documentation as specified in the form.</li>
-                    <li>Please add information for all family members applying for membership.</li>
-                    <li>The form also provides members to add details in a PDF format, which will be submitted along with the application on the same form.</li>
-                    <li>Australian Pashtun Association reserves the right to accept or reject any application at its discretion.</li>
-                  </ul>
-                </div>
-              </div>
-
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-700">3</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Receive Approval</h3>
-                <div className="text-gray-600 text-sm">
-                  <span className="font-semibold">Important:</span>
-                  <ul className="list-disc list-inside">
-                    <li>All submitted applications will be reviewed by our Executive Committee and you'll receive formal approval notification within three working days.</li>
-                    <li>Please ensure all submitted information is accurate to avoid delays. It will be appreciated if you ensure you have added the payment receipt, proof of identity and family details documentation as specified in the form.</li>
-                    <li>Your application may be subject to additional review, and you may be contacted for further information.</li>
-                    <li>Once approved, you'll gain access to all the benefits associated with your membership tier.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          
-            {/* Added the missing closing div tags for the grid and max-w-4xl wrapper */}
-            <div className="text-center">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+                    
+            <div className="text-justify-center max-w-3xl mx-auto">
               <div className="bg-gray-50 p-8 rounded-lg mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Ready to Join Our Community?</h3>
-                <p className="text-gray-600 mb-6">
-                  Take the first step towards becoming part of a vibrant community dedicated to preserving Pashtun culture and supporting each other in Australia.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors">
-                    Family Data Document
-                  </button>
-                  <Link
-                    to="https://drive.google.com/file/d/1NZN-2zufX15oV46q5KbN-p4U5G3GHeor/view?usp=sharing"
-                    className="bg-white text-green-700 border-2 border-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
-                  >
-                    Contact Us for Questions
-                  </Link>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Watch the below video to learn more about our membership process</h3>                
+                <iframe width="560" height="400" src="https://www.youtube-nocookie.com/embed/Cng_qb6Vhcs?si=juMaJ6-VrX1iYYSP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
 
               <div className="text-sm text-gray-500">
@@ -326,12 +302,10 @@ function Membership() {
                 </p>
               </div>
             </div>
-          </div>
         </div>
         </div>
-        
       </section>
-    </Layout>
+    </Layout> 
   );
 }
 
