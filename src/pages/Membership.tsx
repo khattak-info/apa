@@ -249,6 +249,14 @@ function Membership() {
                       >
                         <input className="pp-QJ8NM22QMW2N2" type="submit" value="Pay Membership Fee Through Paypal" />
                       </form>
+
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <a
+                        href="https://www.paypal.com/ncp/payment/QJ8NM22QMW2N2"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors"
+                      >Pay Membership Fee Through Paypal</a>
                   </div>
                 </p>
               </div>
