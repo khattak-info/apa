@@ -267,6 +267,11 @@ function Membership() {
             </div>
           </div>
         </div>
+        <div className="text-sm text-gray-500">
+                <p>
+                  *In case you have more than five family members, please submit the same form again with the additional family members' details, while keeping the head of family's information consistent. Make sure to submit their payment accordingly.
+                </p>
+              </div>
       </section>
 
       {/* Need Help with the application Process */}
