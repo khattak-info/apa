@@ -226,8 +226,24 @@ function Membership() {
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Membership Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="text-justify-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-purple-700">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Submit Application</h3>
+              <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+                    <li>All submitted applications will be reviewed by our Executive Committee and you'll receive formal approval notification within three working days.</li>
+                    <li>Please ensure all submitted information is accurate to avoid delays. It will be appreciated if you ensure you have added the payment receipt, proof of identity and family details documentation as specified in the form.</li>
+                    <li>Your application may be subject to additional review, and you may be contacted for further information.</li>
+                    <li>Once approved, you'll gain access to all the benefits associated with your membership tier.</li>
+              </ul>
+              <button className="w-full bg-purple-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-900 transition-colors">                
+                <a href="https://forms.gle/bworYx7nfG829cNH7" target="_blank" rel="noopener noreferrer" className="ml-2 underline">Step 1 - Membership Form</a>
+              </button>
+            </div>
+
+            <div className="text-justify-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-700">1</span>
+                <span className="text-2xl font-bold text-green-700">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Pay Membership Fee</h3>
               <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
@@ -244,42 +260,9 @@ function Membership() {
                   target="_blank"
                   style={{ display: 'inline' }}
                 >
-                  <input type="submit" value="Step 1 - Pay Membership Fee Through Paypal" />
+                  <input type="submit" value="Step 2 - Pay Membership Fee Through Paypal" />
                 </form>
               </div>
-            </div>
-            
-            {/* <div className="text-justify-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-700">2</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Provide Members and Family Data</h3>
-               <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                    <li>Fill out our membership application form with your personal details and membership tier preference.</li>
-                    <li>You will be required to provide payment proof, proof of identity and any other necessary documentation as specified in the form.</li>
-                    <li>Please add information for all family members applying for membership.</li>
-                    <li>The form also provides members to add details in a PDF format, which will be submitted along with the application on the same form.</li>
-                    <li>Australian Pashtun Association reserves the right to accept or reject any application at its discretion.</li>
-                </ul>
-              {/* <button className="w-full bg-blue-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors">                
-                <a href="https://drive.google.com/file/d/1NZN-2zufX15oV46q5KbN-p4U5G3GHeor/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="ml-2 underline">Step 2 - Members Data</a>
-              </button>  
-            </div> */}
-
-            <div className="text-justify-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-700">2</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Submit Application</h3>
-              <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                    <li>All submitted applications will be reviewed by our Executive Committee and you'll receive formal approval notification within three working days.</li>
-                    <li>Please ensure all submitted information is accurate to avoid delays. It will be appreciated if you ensure you have added the payment receipt, proof of identity and family details documentation as specified in the form.</li>
-                    <li>Your application may be subject to additional review, and you may be contacted for further information.</li>
-                    <li>Once approved, you'll gain access to all the benefits associated with your membership tier.</li>
-              </ul>
-              <button className="w-full bg-purple-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-900 transition-colors">                
-                <a href="https://forms.gle/bworYx7nfG829cNH7" target="_blank" rel="noopener noreferrer" className="ml-2 underline">Step 2 - Membership Form</a>
-              </button>
             </div>
           </div>
         </div>
