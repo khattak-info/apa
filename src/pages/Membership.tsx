@@ -235,6 +235,7 @@ function Membership() {
                     <li>Please ensure all submitted information is accurate to avoid delays. It will be appreciated if you ensure you have added the payment receipt, proof of identity and family details documentation as specified in the form.</li>
                     <li>Your application may be subject to additional review, and you may be contacted for further information.</li>
                     <li>Once approved, you'll gain access to all the benefits associated with your membership tier.</li>
+                    <li>Your membership will be valid for one year from the date of approval after the confirmation of payment.</li>
               </ul>
               <button className="w-full bg-purple-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-900 transition-colors">                
                 <a href="https://forms.gle/bworYx7nfG829cNH7" target="_blank" rel="noopener noreferrer" className="ml-2 underline">Step 1 - Membership Form</a>
