@@ -223,10 +223,13 @@ function Membership() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Pay Membership Fee</h3>
                 <p className="text-gray-600 text-sm">
-                  Submit the applicable membership fee based on your chosen tier and membership category for each member of your family. 
-                  If this is your first time applying, please pay the one-time registration fee for Premium Membership for each family, this includes the General Membership fee for current year.
-                  Alternatively, if you are renewing your membership only then you need to pay the General Membership for each family member. 
-                  Remember to keep the payment receipt for your records and submit it with your application along with proof of identity.
+                  <span className="font-semibold">Important:</span>
+                  <ul className="list-disc list-inside">
+                    <li>Submit the applicable membership fee based on your chosen tier and membership category for each member of your family.</li>
+                    <li>If this is your first time applying, please pay the one-time registration fee for Premium Membership for each family, this includes the General Membership fee for current year.</li>
+                    <li>Alternatively, if you are renewing your membership only then you need to pay the General Membership for each family member.</li>
+                    <li>Remember to keep the payment receipt for your records and submit it with your application along with proof of identity.</li>
+                  </ul>
                   <div>
                     <style>{`
                       .pp-QJ8NM22QMW2N2 {
@@ -244,7 +247,7 @@ function Membership() {
                         target="_blank"
                         style={{ display: 'inline' }}
                       >
-                        <input className="pp-QJ8NM22QMW2N2" type="submit" value="Buy Now" />
+                        <input className="pp-QJ8NM22QMW2N2" type="submit" value="Pay Membership Fee Through Paypal" />
                       </form>
                   </div>
                 </p>
@@ -256,11 +259,14 @@ function Membership() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Complete Application</h3>
                 <p className="text-gray-600 text-sm">
-                  Fill out our membership application form with your personal details and membership tier preference.
-                  You will be required to provide payment proof, proof of identity and any other necessary documentation as specified in the form.
-                  Please add information for all family members applying for membership. 
-                  The form also provides members to add details in a PDF format, which will be submitted along with the application on the same form.
-                  Australian Pashtun Association reserves the right to accept or reject any application at its discretion.                  
+                  <span className="font-semibold">Important:</span>
+                  <ul className="list-disc list-inside">
+                    <li>Fill out our membership application form with your personal details and membership tier preference.</li>
+                    <li>You will be required to provide payment proof, proof of identity and any other necessary documentation as specified in the form.</li>
+                    <li>Please add information for all family members applying for membership.</li>
+                    <li>The form also provides members to add details in a PDF format, which will be submitted along with the application on the same form.</li>
+                    <li>Australian Pashtun Association reserves the right to accept or reject any application at its discretion.</li>
+                  </ul>
                 </p>
               </div>
 
@@ -271,11 +277,13 @@ function Membership() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Receive Approval</h3>
                 <p className="text-gray-600 text-sm">
-                  All submitted applications will be reviewed by our Executive Committee and you'll receive formal approval notification within three working days.
-                  Please ensure all submitted information is accurate to avoid delays. It will be appreciated if you ensure you have added the payment receipt, 
-                  proof of identity and family details documentation as specified in the form.
-                  Your application may be subject to additional review, and you may be contacted for further information.
-                  Once approved, you'll gain access to all the benefits associated with your membership tier.
+                  <span className="font-semibold">Important:</span>
+                  <ul className="list-disc list-inside">
+                    <li>All submitted applications will be reviewed by our Executive Committee and you'll receive formal approval notification within three working days.</li>
+                    <li>Please ensure all submitted information is accurate to avoid delays. It will be appreciated if you ensure you have added the payment receipt, proof of identity and family details documentation as specified in the form.</li>
+                    <li>Your application may be subject to additional review, and you may be contacted for further information.</li>
+                    <li>Once approved, you'll gain access to all the benefits associated with your membership tier.</li>
+                  </ul>
                 </p>
               </div>
             </div>
