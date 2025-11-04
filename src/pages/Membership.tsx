@@ -294,7 +294,9 @@ function Membership() {
                   </ul>
                 </div>
               </div>
-
+            </div>
+          
+            {/* Added the missing closing div tags for the grid and max-w-4xl wrapper */}
             <div className="text-center">
               <div className="bg-gray-50 p-8 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Ready to Join Our Community?</h3>
