@@ -1,14 +1,6 @@
 import { useState } from "react";
-// import Layout from "../components/Layout";
+import Layout from "../components/Layout";
 import allMembers from "../data/membersData.json";
-
-// Placeholder for the Layout component to make the file runnable
-const Layout = ({ children }) => (
-  <div className="min-h-screen bg-gray-100 font-sans">
-    {/* Tailwind CSS is assumed to be available */}
-    <main>{children}</main>
-  </div>
-);
 
 /**
  * Utility function to generate initials for the placeholder image.
