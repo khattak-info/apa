@@ -328,6 +328,8 @@ function Membership() {
             </div>
           </div>
         </div>
+        </div>
+        
       </section>
     </Layout>
   );
