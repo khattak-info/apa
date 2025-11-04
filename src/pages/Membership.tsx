@@ -222,7 +222,7 @@ function Membership() {
                   <span className="text-2xl font-bold text-green-700">1</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Pay Membership Fee</h3>
-                <p className="text-gray-600 text-sm">
+                <div className="text-gray-600 text-sm">
                   <span className="font-semibold">Important:</span>
                   <ul className="list-disc list-inside">
                     <li>Submit the applicable membership fee based on your chosen tier and membership category for each member of your family.</li>
@@ -257,8 +257,8 @@ function Membership() {
                         rel="noopener noreferrer"
                         className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors"
                       >Pay Membership Fee Through Paypal</a>
-                  </div>
-                </p>
+                      </div>
+                   </div>
               </div>
 
               <div className="text-center">
@@ -266,7 +266,7 @@ function Membership() {
                   <span className="text-2xl font-bold text-green-700">2</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Complete Application</h3>
-                <p className="text-gray-600 text-sm">
+                <div className="text-gray-600 text-sm">
                   <span className="font-semibold">Important:</span>
                   <ul className="list-disc list-inside">
                     <li>Fill out our membership application form with your personal details and membership tier preference.</li>
@@ -275,7 +275,7 @@ function Membership() {
                     <li>The form also provides members to add details in a PDF format, which will be submitted along with the application on the same form.</li>
                     <li>Australian Pashtun Association reserves the right to accept or reject any application at its discretion.</li>
                   </ul>
-                </p>
+                </div>
               </div>
 
 
@@ -284,7 +284,7 @@ function Membership() {
                   <span className="text-2xl font-bold text-green-700">3</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Receive Approval</h3>
-                <p className="text-gray-600 text-sm">
+                <div className="text-gray-600 text-sm">
                   <span className="font-semibold">Important:</span>
                   <ul className="list-disc list-inside">
                     <li>All submitted applications will be reviewed by our Executive Committee and you'll receive formal approval notification within three working days.</li>
@@ -292,9 +292,8 @@ function Membership() {
                     <li>Your application may be subject to additional review, and you may be contacted for further information.</li>
                     <li>Once approved, you'll gain access to all the benefits associated with your membership tier.</li>
                   </ul>
-                </p>
+                </div>
               </div>
-            </div>
 
             <div className="text-center">
               <div className="bg-gray-50 p-8 rounded-lg mb-8">
