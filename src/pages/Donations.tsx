@@ -29,9 +29,7 @@ function Donations() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors"
-            >
-              Donate Today
-            </Link>
+            >Donate Today</a>
           </div>
         </div>
       </section>
