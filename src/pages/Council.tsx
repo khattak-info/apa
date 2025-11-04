@@ -32,16 +32,56 @@ function Council() {
         <section className="bg-gradient-to-br from-green-50 to-blue-50 py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Responsible People</h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Governance Model</h1>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                The role of a 'Responsible Person' is an important one for registered charities. Generally, a charity's Responsible People are its board or committee members, or trustees.
+                The Australian Pashtun Association operates under a structured governance model that honors traditional Pashtun decision-making processes while meeting modern organizational 
+                requirements. The governance framework is designed to ensure transparency, accountability, and community representation.
                 </p>
             </div>
             </div>
         </section>
 
-        {/* Event Categories Filter */}
+          {/* Our Structure */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Executive Council (Pashtun Jirga)</h4>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Our Executive Council, known as the Pashtun Jirga, consists of respected community elders who provide wisdom, guidance, and oversight to the organization's activities and decisions.
+                  </p>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Provides strategic guidance</li>
+                    <li>• Upholds traditional values</li>
+                    <li>• Resolves community disputes</li>
+                    <li>• Maintains cultural authenticity</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Executive Committee</h4>
+                  <p className="text-gray-600 text-sm mb-4">
+                    The Executive Committee handles the day-to-day operations of the association, implementing programs and managing administrative responsibilities.
+                  </p>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Manages daily operations</li>
+                    <li>• Implements programs</li>
+                    <li>• Handles membership applications</li>
+                    <li>• Coordinates events and activities</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        {/* Categories Filter */}
         <section className="py-8 bg-white border-b">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Structure</h2>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-center gap-4">
                 {categories.map((role) => (
@@ -61,19 +101,14 @@ function Council() {
             </div>
         </section>
 
-        {/* Events Grid */}
+        {/* Grid */}
         <section className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {filteredMembers.length > 0 ? (
                 filteredMembers.map((member) => (
                     <div key={member.id} className="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <div className="relative">
-                        {/* FIX: Replaced member.profile with a dynamic placeholder image URL.
-                        In a real React app with a bundler, you would need to 'require' or 'import' the image 
-                        dynamically inside the map function, or ensure the JSON paths are public URLs.
-                        For a self-contained environment, this placeholder is the best solution.
-                        */}
+                    <div className="relative">                      
                         <img
                         src={`https://placehold.co/400x400/10B981/ffffff?text=${getInitials(member.name)}`}
                         alt={`Profile of ${member.name}`}

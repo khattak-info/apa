@@ -10,7 +10,7 @@ function Membership() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Membership</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join our community and become part of a vibrant network supporting Pashtun culture and values in Australia
+              Become part of a vibrant network supporting Pashtun culture and values in Australia
             </p>
           </div>
         </div>
@@ -19,11 +19,11 @@ function Membership() {
       {/* Eligibility Requirements */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Eligibility Requirements</h2>
+          {/* <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Eligibility Requirements</h2> */}
           
           <div className="max-w-4xl mx-auto">
             <div className="bg-white p-8 rounded-lg shadow-md mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Standard Eligibility</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Eligibility Requirements</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Who Can Apply:</h4>
@@ -34,7 +34,7 @@ function Membership() {
                     </li>
                     <li className="flex items-start space-x-2">
                       <span className="text-green-600 mt-1">•</span>
-                      <span>Individuals married to a Pashtun</span>
+                      <span>Individuals married to a Pashtun by birth</span>
                     </li>
                   </ul>
                 </div>
@@ -43,7 +43,7 @@ function Membership() {
                   <ul className="text-gray-600 space-y-2">
                     <li className="flex items-start space-x-2">
                       <span className="text-green-600 mt-1">•</span>
-                      <span>Head of family must be a member of the Executive Council (for Premium Membership)</span>
+                      <span>Head of family must be a Premium Member to add dependents</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <span className="text-green-600 mt-1">•</span>
@@ -149,10 +149,10 @@ function Membership() {
                   </li>
                 </ul>
               </div>
-
-              <button className="w-full bg-green-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-800 transition-colors">
+              {/* Button to unhide when portal works */}
+              {/* <button className="w-full bg-green-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-800 transition-colors">
                 <Link to="#process">Apply for Premium Membership</Link>
-              </button>
+              </button> */}
             </div>
 
             {/* General Membership */}
@@ -206,10 +206,10 @@ function Membership() {
                   </li>
                 </ul>
               </div>
-
-              <button className="w-full bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
+                {/* Button to unhide when portal works */}
+              {/* <button className="w-full bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
                 <Link to="#process">Apply for Premium Membership</Link>
-              </button>
+              </button> */}
               
             </div>
           </div>

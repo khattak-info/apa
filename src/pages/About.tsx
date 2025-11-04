@@ -79,48 +79,7 @@ function About() {
         </div>
       </section>
 
-      {/* Our Structure */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Structure</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Governance Model</h3>
-              <p className="text-gray-600 mb-6">
-                The Australian Pashtun Association operates under a structured governance model that honors traditional Pashtun decision-making processes while meeting modern organizational requirements.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Executive Council (Pashtun Jirga)</h4>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Our Executive Council, known as the Pashtun Jirga, consists of respected community elders who provide wisdom, guidance, and oversight to the organization's activities and decisions.
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Provides strategic guidance</li>
-                    <li>• Upholds traditional values</li>
-                    <li>• Resolves community disputes</li>
-                    <li>• Maintains cultural authenticity</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Executive Committee</h4>
-                  <p className="text-gray-600 text-sm mb-4">
-                    The Executive Committee handles the day-to-day operations of the association, implementing programs and managing administrative responsibilities.
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Manages daily operations</li>
-                    <li>• Implements programs</li>
-                    <li>• Handles membership applications</li>
-                    <li>• Coordinates events and activities</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
     </Layout>
   );
 }

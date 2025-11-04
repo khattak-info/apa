@@ -5,9 +5,10 @@ import Membership from "./pages/Membership";
 import Events from "./pages/Events";
 import Donations from "./pages/Donations";
 import Contact from "./pages/Contact";
-import Council from "./pages/Council.tsx";
+import Council from "./pages/Council";
 import NotFound from "./pages/NotFound";
-
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/membership" element={<Membership />} />
         <Route path="/council" element={<Council />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
 
         {/* IMPORTANT: DO NOT place any routes below this. */}
         <Route path="*" element={<NotFound />} />

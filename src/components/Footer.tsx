@@ -39,6 +39,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/council" className="text-gray-300 hover:text-white transition-colors">
+                  Council Members
+                </Link>
+              </li>
+              <li>
                 <Link to="/membership" className="text-gray-300 hover:text-white transition-colors">
                   Membership
                 </Link>
@@ -49,8 +54,8 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact Us
+                <Link to="/donate" className="text-gray-300 hover:text-white transition-colors">
+                  Donate
                 </Link>
               </li>
             </ul>
@@ -58,8 +63,12 @@ function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-gray-300">
+            <h4 className="text-lg font-semibold mb-4">
+              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors underline">
+                  Contact Us
+                </Link>
+            </h4>
+             <div className="space-y-2 text-gray-300">
               <p className="text-sm">
                 <span className="block font-medium">Email:</span>
                 info@pashtun.org.au
@@ -89,6 +98,10 @@ function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
             © 2025 Australian Pashtun Association. All rights reserved.
+            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors underline"> Privacy Policy</Link> | 
+            <Link to="/terms" className="text-gray-400 hover:text-white transition-colors underline"> Terms of Service</Link>
+            <br />
+            <a href="https://khattak.info" className="text-gray-400 hover:text-white transition-colors underline">Made with ♥ by Khattak.info</a>
           </p>
         </div>
       </div>
