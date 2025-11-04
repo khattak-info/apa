@@ -5,7 +5,9 @@ import Membership from "./pages/Membership";
 import Events from "./pages/Events";
 import Donations from "./pages/Donations";
 import Contact from "./pages/Contact";
+import Council from "./pages/Council.tsx";
 import NotFound from "./pages/NotFound";
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Route path="/donations" element={<Donations />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/membership" element={<Membership />} />
+        <Route path="/council" element={<Council />} />
 
         {/* IMPORTANT: DO NOT place any routes below this. */}
         <Route path="*" element={<NotFound />} />

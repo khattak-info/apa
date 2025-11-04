@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Intikhab Alam",
+        "role": "President",
+        "description": "Responsible for leading the board and ensuring effective governance of the organization.",
+        "email": "president@pashtun.org.au",
+        "term": "2025-2026",
+        "profile": "../images/council/intikhab_alam.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Hasan Ali Khattak",
+        "role": "Vice President",
+        "description": "Supports the Chairperson and acts in their absence, assists with strategic planning.",
+        "email": "vice.president@pashtun.org.au",
+        "term": "2025-2026",
+        "profile": "../images/council/hasan_khattak.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Mazhar Alam",
+        "role": "Treasurer",
+        "description": "Oversees financial management, budgeting, and financial reporting for the organization.",
+        "email": "tresurer@pashtun.org.au",
+        "term": "2025-2026",
+        "profile": "../images/mazhar_alam.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Iftikhar Ahmad",
+        "role": "Committee Member",
+        "description": "Maintains records, manages correspondence, and ensures compliance with regulatory requirements.",
+        "email": "committee.member@pashtun.org.au",
+        "term": "2025-2026",
+        "profile": "../images/council/iftikhar_ahmad.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Ibrahim Shah",
+        "role": "Committee Member",
+        "description": "Contributes to strategic decision-making and supports the organization's mission and objectives.",
+        "email": "committee.member@pashtun.org.au",
+        "term": "2025-2026",
+        "profile": "../images/council/ibrahim_shah.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Shah Hussain Khan",
+        "role": "Vice President",
+        "description": "Provides expertise in community engagement and program development.",
+        "email": "vice.president@pashtun.org.au",
+        "term": "2025-2026",
+        "profile": "../images/council/shah_hussain_khan.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Jahanzib Shah Said",
+        "role": "Vice President",
+        "description": "Assists in organizing events and community outreach initiatives.",
+        "email": "vice.president@pashtun.org.au",
+        "term": "2025-2026",
+        "profile": "../images/council/jahanzib_shah_said.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Saghed Sabavoun",
+        "role": "Committee Member",
+        "description": "Supports the board in governance and compliance matters.",
+        "email": "committee.member@pashtun.org.au",
+        "term": "2025-2026",
+        "profile": "../images/council/saghed_sabavoun.jpg"
+    }
+]

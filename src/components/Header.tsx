@@ -9,9 +9,10 @@ function Header() {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },    
+    { name: "Council", href: "/council" },
     { name: "Events", href: "/events" },
-    { name: "Donations", href: "/donations" },
     { name: "Contact", href: "/contact" },
+    { name: "Donations", href: "/donations" },    
     { name: "Membership", href: "/membership" },
   ];
 
