@@ -1,0 +1,62 @@
+[
+    {
+        "memberId": "APA-25M0001",
+        "voter": true,
+        "name": "Mazhar Alam",
+        "gender": "Male",
+        "dob": "1985-01-01",
+        "identity": "AB123456",
+        "membershipStatus": "Active",
+        "yearOfFirstMembership": 2025,
+        "yearsActive": 1,
+        "committeeMember": true
+    },
+    {
+        "memberId": "APA-25F0002",
+        "voter": true,
+        "name": "Mrs. M. Alam",
+        "gender": "Female",
+        "dob": "1993-01-26",
+        "identity": "AB123456",
+        "membershipStatus": "Active",
+        "yearOfFirstMembership": 2025,
+        "yearsActive": 1,
+        "committeeMember": false
+    },
+    {
+        "memberId": "APA-25M0003",
+        "voter": true,
+        "name": "Intikhab Alam",
+        "gender": "Male",
+        "dob": "1976-03-28",
+        "identity": "CD789012",
+        "membershipStatus": "Active",
+        "yearOfFirstMembership": 2025,
+        "yearsActive": 1,
+        "committeeMember": true
+    },
+    {
+        "memberId": "APA-19F0004",
+        "voter": true,
+        "name": "Mrs. S. Alam",
+        "gender": "Female",
+        "dob": "1985-01-07",
+        "identity": "EF345678",
+        "membershipStatus": "Active",
+        "yearOfFirstMembership": 2025,
+        "yearsActive": 1,
+        "committeeMember": false
+    },
+    {
+        "memberId": "APA-18M0004",
+        "voter": true,
+        "name": "Ibrahim Shah",
+        "gender": "Male",
+        "dob": "1987-08-11",
+        "identity": "GH901234",
+        "membershipStatus": "Active",
+        "yearOfFirstMembership": 2025,
+        "yearsActive": 1,
+        "committeeMember": true
+    }
+]  

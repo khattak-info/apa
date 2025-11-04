@@ -2,7 +2,18 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "netlify dev",
+      "name": "Debug Netlify Functions",
+      "type": "node",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "outFiles": ["${workspaceFolder}/.netlify/functions-serve/**/*.js"],
+      "program": "${workspaceFolder}/node_modules/.bin/netlify",
+      "args": ["functions:serve"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "netlify dev with Chrome",
       "type": "node",
       "request": "launch",
       "skipFiles": ["<node_internals>/**"],
@@ -14,18 +25,8 @@
       "serverReadyAction": {
         "pattern": "Server now ready on (https?://[\\w:.-]+)",
         "uriFormat": "%s",
-        "action": "debugWithChrome"
+        "action": "debugWithChrome" // Key change: Use 'debugWithChrome' or 'openExternally'
       }
-    },
-    {
-      "name": "netlify functions:serve",
-      "type": "node",
-      "request": "launch",
-      "skipFiles": ["<node_internals>/**"],
-      "outFiles": ["${workspaceFolder}/.netlify/functions-serve/**/*.js"],
-      "program": "${workspaceFolder}/node_modules/.bin/netlify",
-      "args": ["functions:serve"],
-      "console": "integratedTerminal"
     }
   ]
 }

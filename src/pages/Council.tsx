@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
-import allMembers from "../data/membersData.json";
+import allMembers from "../data/councilData.json";
+import { Link } from "react-router-dom";
 
 /**
  * Utility function to generate initials for the placeholder image.
@@ -48,9 +49,25 @@ function Council() {
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Executive Committee</h4>
+                  <p className="text-gray-600 text-sm mb-4">
+                    The Executive Committee handles the day-to-day operations of the association, implementing programs and managing administrative responsibilities. Members of the Executive Committee are elected by the Premium membership and serve fixed terms as defined in the bylaws.
+                  </p>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Handles membership applications</li>
+                    <li>• Manages daily operations</li>
+                    <li>• Implements programs</li>
+                    <li>• Coordinates events and activities</li>
+                  </ul>
+                  <div className="mt-4">
+                    <a href="#committee" className="bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm ">View Executive Committee Members</a>
+                  </div>
+                </div>
+                
+                <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Executive Council (Pashtun Jirga)</h4>
                   <p className="text-gray-600 text-sm mb-4">
-                    Our Executive Council, known as the Pashtun Jirga, consists of respected community elders who provide wisdom, guidance, and oversight to the organization's activities and decisions.
+                    Our Executive Council, known as the Pashtun Jirga, is a traditional assembly of all paid members who have an active premium membership. These members consist of respected community members who provide wisdom, guidance, and oversight to the organization's activities and decisions.
                   </p>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Provides strategic guidance</li>
@@ -58,19 +75,9 @@ function Council() {
                     <li>• Resolves community disputes</li>
                     <li>• Maintains cultural authenticity</li>
                   </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Executive Committee</h4>
-                  <p className="text-gray-600 text-sm mb-4">
-                    The Executive Committee handles the day-to-day operations of the association, implementing programs and managing administrative responsibilities.
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Manages daily operations</li>
-                    <li>• Implements programs</li>
-                    <li>• Handles membership applications</li>
-                    <li>• Coordinates events and activities</li>
-                  </ul>
+                  <div className="mt-4">
+                    <a href="/members" className="bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm ">View Executive Council Members</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -79,8 +86,8 @@ function Council() {
       </section>
 
         {/* Categories Filter */}
-        <section className="py-8 bg-white border-b">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Structure</h2>
+        <section id="committee" className="py-8 bg-white border-b">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Executive Committee</h2>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-center gap-4">
                 {categories.map((role) => (
