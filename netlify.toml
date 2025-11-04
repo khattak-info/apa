@@ -1,3 +1,0 @@
-[build]
-    publish = "public" # Example: your build output directory
-    command = "npm run build" # Example: your build command
