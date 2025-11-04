@@ -257,7 +257,7 @@ function Membership() {
                     <li>Australian Pashtun Association reserves the right to accept or reject any application at its discretion.</li>
                 </ul>
               <button className="w-full bg-blue-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors">                
-                <a href="https://drive.google.com/file/d/1NZN-2zufX15oV46q5KbN-p4U5G3GHeor/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="ml-2 underline">Membership Data Form</a>
+                <a href="https://drive.google.com/file/d/1NZN-2zufX15oV46q5KbN-p4U5G3GHeor/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="ml-2 underline">Step 2 - Members Data</a>
               </button>
             </div>
 
@@ -273,7 +273,7 @@ function Membership() {
                     <li>Once approved, you'll gain access to all the benefits associated with your membership tier.</li>
               </ul>
               <button className="w-full bg-purple-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-900 transition-colors">                
-                <a href="https://forms.gle/bworYx7nfG829cNH7" target="_blank" rel="noopener noreferrer" className="ml-2 underline">Membership Data Form</a>
+                <a href="https://forms.gle/bworYx7nfG829cNH7" target="_blank" rel="noopener noreferrer" className="ml-2 underline">Step 3 - Membership Form</a>
               </button>
             </div>
           </div>
