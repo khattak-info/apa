@@ -27,7 +27,7 @@ function Header() {
                 <img
                   src={apaLogo}
                   alt="Australian Pashtun Association logo featuring a green and gold circular emblem with Pashto script, conveying a welcoming and community-focused atmosphere"
-                  className="w-8 h-8"
+                  className="w-10 h-10 object-contain"
                 />
               </span>
             </div>
