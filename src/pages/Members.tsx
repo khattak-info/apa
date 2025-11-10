@@ -2,7 +2,6 @@ import { useState, useMemo } from "react";
 import Layout from "../components/Layout";
 // Ensure this path is correct for your project
 import allMembers from "../data/memberData.json";
-import { Link } from "react-router-dom"; 
 
 /**
  * Utility function to generate initials for the placeholder image.

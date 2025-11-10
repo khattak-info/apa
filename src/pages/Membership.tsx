@@ -263,14 +263,13 @@ function Membership() {
                 >
                   <input type="submit" value="Step 2 - Pay Membership Fee Through Paypal" />
                 </form>
-              </div>
-            </div>
-          </div>
-        <div className="text-sm text-gray-500 text-3xl font-bold text-gray-900 mb-12 mt-8 mr-80">
                 <p>
                   *In case you have more than five family members, please submit the same form again with the additional family members' details, while keeping the head of family's information consistent. Make sure to submit their payment accordingly.
                 </p>
-        </div>
+
+              </div>
+            </div>
+          </div>
         </div>
         
       </section>
@@ -284,7 +283,7 @@ function Membership() {
             <div className="text-justify-center max-w-3xl mx-auto">
               <div className="bg-gray-50 p-8 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Watch the below video to learn more about our membership process</h3>                
-                <iframe width="560" height="400" src="https://www.youtube-nocookie.com/embed/Cng_qb6Vhcs?si=juMaJ6-VrX1iYYSP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube-nocookie.com/embed/Cng_qb6Vhcs?si=juMaJ6-VrX1iYYSP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
 
               <div className="text-sm text-gray-500">
