@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import apaLogo from "../images/apa-logo.jpeg";
+import apaLogo from "../images/apa-logo.png";
 
 function Header() {
   const location = useLocation();
