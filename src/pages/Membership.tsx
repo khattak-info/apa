@@ -255,19 +255,19 @@ function Membership() {
                     <li>Australian Pashtun Association reserves the right to accept or reject any application at its discretion.</li>
               </ul>
               <div className="mt-4">
-                <form className="w-full bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors"
+                <form className="w-full text-white px-4 py-3 rounded-lg font-semibold transition-colors"
                   action="https://www.paypal.com/ncp/payment/QJ8NM22QMW2N2"
                   method="post"
                   target="_blank"
                   style={{ display: 'inline' }}
                 >
-                  <input className="w-full bg-green-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-900 transition-colors" type="submit" value="Step 2 - Pay Membership Fee Through Paypal" />
+                  <input className="w-full bg-green-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-900 transition-colors" type="submit" value="Step 2 - Pay Through Paypal" />
                 </form>
               </div>
-               <p>
-                  *In case you have more than five family members, please submit the same form again with the additional family members' details, while keeping the head of family's information consistent. Make sure to submit their payment accordingly.
-                </p>
             </div>
+            <p>
+            *In case you have more than five family members, please submit the same form again with the additional family members' details, while keeping the head of family's information consistent. Make sure to submit their payment accordingly.
+            </p>
           </div>
         </div>
         
