@@ -261,13 +261,12 @@ function Membership() {
                   target="_blank"
                   style={{ display: 'inline' }}
                 >
-                  <input type="submit" value="Step 2 - Pay Membership Fee Through Paypal" />
+                  <input className="w-full bg-green-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-900 transition-colors" type="submit" value="Step 2 - Pay Membership Fee Through Paypal" />
                 </form>
-                <p>
+              </div>
+               <p>
                   *In case you have more than five family members, please submit the same form again with the additional family members' details, while keeping the head of family's information consistent. Make sure to submit their payment accordingly.
                 </p>
-
-              </div>
             </div>
           </div>
         </div>
