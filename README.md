@@ -1,7 +1,7 @@
 ```markdown
 # Project Overview
 - **Project**: Australian Pashtun Association Website - A website for the Australian Pashtun Association, a not-for-profit community organization supporting Pashtuns in Australia.
-- **Tech Stack**: Not specified
+- **Tech Stack**: React 19, Vite 6, TypeScript 5.7, TailwindCSS 3, ESLint, and associated tooling defined in `package.json`
 - **Environment**: Not specified
 
 # Theme, Style, and Vibe
@@ -40,4 +40,7 @@
 # Next Actions
 - **Immediate**: Not specified
 - **Future**: Not specified
+
+# Getting Started
+- **Available npm scripts**: `npm run dev` (local development server), `npm run build` (type-checks and builds for production), `npm run lint` (runs ESLint), `npm run preview` (serves the production build)
 ```
