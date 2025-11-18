@@ -66,7 +66,7 @@ function Terms() {
         "Membership applications must be submitted in writing and include accurate personal details.",
         "The **Executive Committee** reviews all applications and may approve or reject them at its discretion.",
         "Membership commences once payment is received in Australian Pashtun Association's Bank Account",
-        "Application is approved in writing through the email provide with Membership number and validity.",
+        "Application is approved in writing through the email provided with membership number and validity.",
         "Applicants agree to provide truthful information and update APA if their circumstances change."
       ]
     },
