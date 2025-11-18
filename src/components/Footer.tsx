@@ -54,7 +54,7 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/donate" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/donations" className="text-gray-300 hover:text-white transition-colors">
                   Donate
                 </Link>
               </li>
