@@ -109,7 +109,7 @@ function Membership() {
                   <span className="text-lg font-normal text-gray-600"> initial</span>
                 </div>
                 <div className="text-lg text-gray-600">
-                  AUD $20 annual renewal per family member from next year of membership.
+                  AUD $20 annual renewal per family member from the next year of membership.
                 </div>
                 <p className="text-sm text-gray-500 mt-1">*Effective from August 1, 2025</p>
                 <p className="text-sm text-gray-500">Non-refundable one time fee</p>
@@ -231,7 +231,7 @@ function Membership() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Submit Application</h3>
               <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                    <li>All submitted applications will be reviewed by our Executive Committee and you'll receive formal approval notification within three working days.</li>
+                    <li>All submitted applications will be reviewed by our Executive Committee, and you'll receive formal approval notification within three working days.</li>
                     <li>Please ensure all submitted information is accurate to avoid delays. It will be appreciated if you ensure you have added the payment receipt, proof of identity and family details documentation as specified in the form.</li>
                     <li>Your application may be subject to additional review, and you may be contacted for further information.</li>
                     <li>Once approved, you'll gain access to all the benefits associated with your membership tier.</li>
@@ -269,7 +269,7 @@ function Membership() {
           <p>
             *In case you have more than five family members, please submit the same form again with the additional family members' details, while keeping the head of family's information consistent. 
             You can use the PDF version of the form available{" "}
-            <a href="/documents/apa-membership-form.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+            <a href="/documents/apa-membership-family-form.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
               here
             </a>.
             <br/>
