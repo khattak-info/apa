@@ -1,14 +1,14 @@
 [
   {
-    "id": 5,
-    "title": "Nowruz Celebration 2024",
-    "date": "March 21, 2024",
-    "time": "6:00 PM - 10:00 PM",
-    "location": "Community Center, Melbourne",
-    "category": "Cultural",
-    "description": "Join us for the traditional New Year celebration with cultural performances, traditional food, and community activities. Experience the joy of spring and new beginnings with fellow community members.",
-    "memberDiscount": true,
-    "image": "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "id": 1,
+    "title": "Eid ul-Fitr Community Gathering",
+    "date": "March 21, 2026",
+    "time": "11:00 AM - 3:00 PM",
+    "location": "Canterbury Rd, Wiley Park NSW 2195",
+    "category": "Community",
+    "description": "Celebrate Eid ul-Fitr with the entire community. Join us for prayers, traditional feast, children's activities, and community bonding in a festive atmosphere.",
+    "memberDiscount": false,
+    "image": "https://images.pexels.com/photos/8828489/pexels-photo-8828489.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     "id": 2,
@@ -43,16 +43,16 @@
     "memberDiscount": true,
     "image": "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
-  {
-    "id": 1,
-    "title": "Eid ul-Fitr Community Gathering",
-    "date": "March 21, 2026",
-    "time": "11:00 AM - 3:00 PM",
-    "location": "Canterbury Rd, Wiley Park NSW 2195",
-    "category": "Community",
-    "description": "Celebrate Eid ul-Fitr with the entire community. Join us for prayers, traditional feast, children's activities, and community bonding in a festive atmosphere.",
-    "memberDiscount": false,
-    "image": "https://images.pexels.com/photos/8828489/pexels-photo-8828489.jpeg?auto=compress&cs=tinysrgb&w=800"
+    {
+    "id": 5,
+    "title": "Nowruz Celebration 2024",
+    "date": "March 21, 2024",
+    "time": "6:00 PM - 10:00 PM",
+    "location": "Community Center, Melbourne",
+    "category": "Cultural",
+    "description": "Join us for the traditional New Year celebration with cultural performances, traditional food, and community activities. Experience the joy of spring and new beginnings with fellow community members.",
+    "memberDiscount": true,
+    "image": "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     "id": 6,
