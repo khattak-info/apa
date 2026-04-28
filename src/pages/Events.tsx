@@ -9,8 +9,8 @@ function Events() {
 
   const events = allEvents;
 
-  const filteredEvents = selectedCategory === "All" 
-    ? events 
+  const filteredEvents = selectedCategory === "All"
+    ? events
     : events.filter(event => event.category === selectedCategory);
 
   return (
@@ -35,11 +35,10 @@ function Events() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                  selectedCategory === category
-                    ? "bg-green-700 text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-700"
-                }`}
+                className={`px-6 py-2 rounded-full font-medium transition-colors ${selectedCategory === category
+                  ? "bg-green-700 text-white"
+                  : "bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-700"
+                  }`}
               >
                 {category}
               </button>
@@ -61,12 +60,11 @@ function Events() {
                     className="w-full h-48 object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                      event.category === "Cultural" ? "bg-green-100 text-green-800" :
+                    <span className={`px-3 py-1 rounded-full text-sm font-semibold ${event.category === "Cultural" ? "bg-green-100 text-green-800" :
                       event.category === "Educational" ? "bg-blue-100 text-blue-800" :
-                      event.category === "Youth" ? "bg-purple-100 text-purple-800" :
-                      "bg-orange-100 text-orange-800"
-                    }`}>
+                        event.category === "Youth" ? "bg-purple-100 text-purple-800" :
+                          "bg-orange-100 text-orange-800"
+                      }`}>
                       {event.category}
                     </span>
                   </div>
@@ -78,10 +76,10 @@ function Events() {
                     </div>
                   )}
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{event.title}</h3>
-                  
+
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center text-gray-600 text-sm">
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,14 +101,15 @@ function Events() {
                       {event.location}
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                     {event.description}
                   </p>
-                  
+
                   <div className="flex items-center justify-between">
                     <button className="bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm">
                       Learn More
+
                     </button>
                     {event.memberDiscount && (
                       <span className="text-green-700 text-xs font-medium">
@@ -129,7 +128,7 @@ function Events() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Event Highlights</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
