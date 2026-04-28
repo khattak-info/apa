@@ -107,7 +107,7 @@ function Events() {
                   </p>
 
                   <div className="flex items-center justify-between">
-                    <button className="bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm">
+                    <button className="bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm" onClick={() => window.open(event.url)}>
                       Learn More
 
                     </button>
