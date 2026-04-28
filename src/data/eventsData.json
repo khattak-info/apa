@@ -1,36 +1,36 @@
 [
   {
     "id": 1,
-    "title": "Eid ul-Fitr Community Gathering",
+    "title": "Eid ul-Fitr Community Gathering 2026",
     "date": "March 21, 2026",
     "time": "11:00 AM - 3:00 PM",
     "location": "Canterbury Rd, Wiley Park NSW 2195 Sydney",
     "category": "Community",
     "description": "Celebrate Eid ul-Fitr with the entire community. Join us for prayers, traditional feast, children's activities, and community bonding in a festive atmosphere.",
     "memberDiscount": false,
-    "image": "https://images.pexels.com/photos/8828489/pexels-photo-8828489.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "image": "https://images.pexels.com/photos/7249766/pexels-photo-7249766.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     "id": 2,
-    "title": "Pashto Poetry Evening",
-    "date": "March 22, 2026",
-    "time": "7:00 PM - 9:30 PM",
-    "location": "Cultural Hall, Sydney",
-    "category": "Cultural",
-    "description": "An evening of Pashto poetry, storytelling, and literary discussions celebrating our rich literary heritage. Local poets and storytellers will share their work and engage with the community.",
-    "memberDiscount": true,
-    "image": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "title": "Eid ul-Adha Community Gathering 2026",
+    "date": "May 29, 2026",
+    "time": "5:00 PM - 11:00 PM",
+    "location": "Canterbury Rd, Wiley Park NSW 2195 Sydney",
+    "category": "Community",
+    "description": "Celebrate Eid ul-Adha with the entire community. Join us for enjoyment, traditional feast, children's activities, and community bonding in a festive atmosphere.",
+    "memberDiscount": false,
+    "image": "https://images.pexels.com/photos/533325/pexels-photo-533325.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     "id": 3,
     "title": "International Pashto Day",
     "date": "May 29, 2026",
-    "time": "2:00 PM - 6:00 PM",
-    "location": "Sydney",
-    "category": "Educational",
-    "description": "Celebrating the beauty and importance of the Pashto language with educational workshops, language classes, and cultural activities for all ages.",
-    "memberDiscount": true,
-    "image": "https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "time": "6:00 PM - 8:00 PM",
+    "location": "",
+    "category": "Cultural",
+    "description": "Celebrating the beauty and importance of the Pashto language with educational talks and discussions, as well as cultural activities for all ages. The event will be accompanied by Eid-ul-Adha Gathering Dinner",
+    "memberDiscount": false,
+    "image": "https://images.pexels.com/photos/22669391/pexels-photo-22669391.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     "id": 4,
