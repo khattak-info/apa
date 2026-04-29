@@ -112,7 +112,7 @@ function Events() {
                     </button>
                     {event.memberDiscount && (
                       <span className="text-green-700 text-xs font-medium">
-                        15-20% off for members
+                        Discount for members
                       </span>
                     )}
                   </div>
