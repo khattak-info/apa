@@ -16,7 +16,7 @@
     "title": "Eid ul-Adha Community Gathering 2026",
     "date": "May 29, 2026",
     "time": "5:00 PM - 11:00 PM",
-    "location": "N Rocks Rd & Farnell Avenue, Carlingford NSW 2118",
+    "location": "Don Moore Community Centre, N Rocks Rd & Farnell Avenue, Carlingford NSW 2118",
     "category": "Community",
     "description": "Celebrate Eid ul-Adha with the entire community. Join us for enjoyment, traditional feast, children's activities, and community bonding in a festive atmosphere.",
     "memberDiscount": false,
@@ -28,12 +28,12 @@
     "title": "International Pashto Day",
     "date": "May 29, 2026",
     "time": "6:00 PM - 8:00 PM",
-    "location": "N Rocks Rd & Farnell Avenue, Carlingford NSW 2118",
+    "location": "Don Moore Community Centre, N Rocks Rd & Farnell Avenue, Carlingford NSW 2118",
     "category": "Cultural",
     "description": "Celebrating the beauty and importance of the Pashto language with educational talks and discussions, as well as cultural activities for all ages. The event will be accompanied by Eid-ul-Adha Gathering Dinner",
     "memberDiscount": false,
     "image": "https://images.pexels.com/photos/22669391/pexels-photo-22669391.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "url": "https://pashtun.org.au/events"
+    "url": "https://luma.com/cyvsnlhy"
   },
   {
     "id": 4,
@@ -56,8 +56,7 @@
     "category": "Cultural",
     "description": "Join us for the traditional New Year celebration with cultural performances, traditional food, and community activities. Experience the joy of spring and new beginnings with fellow community members.",
     "memberDiscount": true,
-    "image": "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "url": "https://pashtun.org.au/events"
+    "image": "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     "id": 6,
@@ -69,6 +68,6 @@
     "description": "Learn about Pashtun history, traditions, and cultural practices through interactive workshops, exhibitions, and presentations by cultural experts.",
     "memberDiscount": true,
     "image": "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "url": "https://pashtun.org.au/events"
+    "url": ""
   }
 ]

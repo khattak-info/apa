@@ -108,7 +108,7 @@ function Events() {
 
                   <div className="flex items-center justify-between">
                     <button className="bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm" onClick={() => window.open(event.url)}>
-                      {event.url ? "Learn More" : "Register Now"}
+                      {event.url ? "Register Now" : "Sorry, this event is now over"}
                     </button>
                     {event.memberDiscount && (
                       <span className="text-green-700 text-xs font-medium">
