@@ -107,9 +107,28 @@ function Events() {
                   </p>
 
                   <div className="flex items-center justify-between">
-                    <button className="bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm" onClick={() => window.open(event.url)}>
-                      {event.url ? "Register Now" : "Not Available"}
-                    </button>
+                    {event.url ? (
+                      event.url.includes("luma.com") || event.url.includes("lu.ma") ? (
+                        <a
+                          href={event.url}
+                          className="luma-checkout--button bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm inline-block"
+                          data-luma-action="checkout"
+                        >
+                          Register Now
+                        </a>
+                      ) : (
+                        <button 
+                          className="bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm" 
+                          onClick={() => window.open(event.url, '_blank')}
+                        >
+                          Register Now
+                        </button>
+                      )
+                    ) : (
+                      <button className="bg-gray-400 text-white px-4 py-2 rounded-lg font-medium cursor-not-allowed text-sm" disabled>
+                        Not Available
+                      </button>
+                    )}
                     {event.memberDiscount && (
                       <span className="text-green-700 text-xs font-medium">
                         Discount for members

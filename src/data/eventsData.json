@@ -8,8 +8,7 @@
     "category": "Community",
     "description": "Celebrate Eid ul-Fitr with the entire community. Join us for prayers, traditional feast, children's activities, and community bonding in a festive atmosphere.",
     "memberDiscount": false,
-    "image": "https://images.pexels.com/photos/7249766/pexels-photo-7249766.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "url": "https://pashtun.org.au/events"
+    "image": "https://images.pexels.com/photos/7249766/pexels-photo-7249766.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     "id": 2,
@@ -44,8 +43,7 @@
     "category": "Youth",
     "description": "A comprehensive workshop designed to empower young Pashtuns with leadership skills, career guidance, and networking opportunities with successful community members.",
     "memberDiscount": true,
-    "image": "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "url": "https://pashtun.org.au/events"
+    "image": "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     "id": 5,
