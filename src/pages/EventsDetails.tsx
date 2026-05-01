@@ -33,6 +33,7 @@ function EventDetails() {
         </Link>
 
         <h1 className="text-2xl font-bold mb-4">{event.title}</h1>
+        <p className="text-lg text-gray-700">{event.description}</p>
         <br />
         <form action="https://www.paypal.com/donate" method="post" target="_top" className="flex items-center gap-2">
           <input type="hidden" name="campaign_id" value="LSA3FYW4TA82E" />
@@ -48,17 +49,12 @@ function EventDetails() {
 
         <div className="mt-8" dangerouslySetInnerHTML={{ __html: event.iframe }} />
 
-        {/* <img src={event.image} alt={event.title} className="w-full h-96 o?bject-cover rounded-lg mb-8" /> */}
-
-
         <div className="bg-gray-50 p-6 rounded-lg mb-8">
           <p><strong>Date:</strong> {event.date}</p>
           <p><strong>Time:</strong> {event.time}</p>
           <p><strong>Location:</strong> {event.location}</p>
           <p><strong>Category:</strong> {event.category}</p>
         </div>
-
-        <p className="text-lg text-gray-700">{event.description}</p>
       </div>
     </Layout>
   );
