@@ -54,7 +54,7 @@ function Home() {
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-48 object-cover cursor-pointer"
+                  className="w-full h-64 object-cover cursor-pointer"
                 />
               </Link>
             </div>
