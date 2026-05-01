@@ -1,14 +1,13 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
 import allMembers from "../data/councilData.json";
-import { Link } from "react-router-dom";
 
 /**
  * Utility function to generate initials for the placeholder image.
  * @param {string} name - The member's full name.
  * @returns {string} The first two initials (e.g., "Intikhab Alam" -> "IA").
  */
-const getInitials = (name) => {
+const getInitials = (name: string) => {
   if (!name) return 'AP';
   const parts = name.split(/\s+/);
   if (parts.length >= 2) {

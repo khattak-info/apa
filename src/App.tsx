@@ -11,6 +11,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Members from "./pages/Members";
 import EventsDetails from "./pages/EventsDetails";
+import EventsGallery from "./pages/EventsGallery";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/members" element={<Members />} />
+        <Route path="/gallery/:id" element={<EventsGallery />} />
 
         {/* IMPORTANT: DO NOT place any routes below this. */}
         <Route path="*" element={<NotFound />} />

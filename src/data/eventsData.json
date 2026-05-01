@@ -9,7 +9,8 @@
     "description": "Celebrate Eid ul-Fitr with the entire Australian Pashtun Association (APA). Join us for prayers, traditional feast, children's activities, and community bonding in a festive atmosphere.",
     "memberDiscount": false,
     "image": "https://images.pexels.com/photos/7249766/pexels-photo-7249766.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "mainEvent": false
+    "mainEvent": false,
+    "gallery": "<script>if(!window.picflow){window.picflow=!0;var s=document.createElement('script');s.src='https://picflow.com/embed/main.js';s.type='module';s.defer=true;document.head.appendChild(s);}</script><picflow-gallery id='gal_p9y8QCPHGGzjBPWz' tenant='tnt_0BGxpBSfnDomaloR' lightbox='#000000E6' no-padding='true' no-background='true' show-cover='true'><p style='font-size:12px;color:#999;font-family:sans-serif'>Client gallery powered by <a href='https://picflow.com'>Picflow</a></p></picflow-gallery>"
   },
   {
     "id": 2,
@@ -30,7 +31,7 @@
   {
     "id": 3,
     "title": "Nowruz Celebration 2026",
-    "date": "March 21, 2024",
+    "date": "March 21, 2026",
     "time": "6:00 PM - 10:00 PM",
     "location": "Community Centre, Auburn, Sydney",
     "category": "Cultural",

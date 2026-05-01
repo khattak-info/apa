@@ -118,29 +118,29 @@ function Events() {
                       event.url.includes("luma.com") || event.url.includes("lu.ma") ? (
                         <a
                           href={event.donationLink}
-                          className="luma-checkout--button bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm inline-block"
+                          className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
                           data-luma-action="checkout"
                         >
-                          Donate and Register to join
+                          Donate and Register
                         </a>
                       ) : (
                         <button
-                          className="bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
+                          className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
                           onClick={() => window.open(event.donationLink, '_blank')}
                         >
-                          Request to Join
+                          Donate and Register
                         </button>
                       )
                     ) : (
-                      <button className="bg-gray-400 text-white px-4 py-2 rounded-lg font-medium cursor-not-allowed text-sm" disabled>
-                        Not Available
-                      </button>
+                      <button disabled>                     </button>
                     )}
 
-                    {event.memberDiscount && (
-                      <span className="text-green-700 text-xs font-medium">
-                        Discount for members
-                      </span>
+                    {event.gallery && (
+                      <Link to={`/gallery/${event.id}`}>
+                        <button className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm">
+                          View Gallery
+                        </button>
+                      </Link>
                     )}
                   </div>
                 </div>
