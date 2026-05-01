@@ -21,7 +21,8 @@
     "category": "Community",
     "description": "Celebrate Eid ul-Adha with the Australian Pashtun Association (APA). Join us for enjoyment, traditional feast, children's activities, and community bonding in a festive atmosphere.",
     "memberDiscount": false,
-    "image": "https://images.pexels.com/photos/533325/pexels-photo-533325.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "image1": "https://images.pexels.com/photos/533325/pexels-photo-533325.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "image": "https://i.imgur.com/k8yRvoz.jpeg",
     "url": "https://luma.com/cyvsnlhy",
     "donationLink": "https://www.paypal.com/donate/?campaign_id=LSA3FYW4TA82E",
     "iframe": "<iframe src='https://luma.com/embed/event/evt-c6J4HZkWhTLgP0G/simple' width='100%' height='1000px' frameborder='0' allow='clipboard-read; clipboard-write' aria-hidden='false' tabindex='0' style='border-radius: 8px;'></iframe>",
@@ -30,6 +31,19 @@
   },
   {
     "id": 3,
+    "title": "Cultural Heritage Workshop",
+    "date": "July 20, 2026",
+    "time": "1:00 PM - 5:00 PM",
+    "location": "Sydney",
+    "category": "Educational",
+    "description": "Learn about Pashtun history, traditions, and cultural practices through interactive workshops, exhibitions, and presentations by cultural experts.",
+    "memberDiscount": true,
+    "image": "https://images.pexels.com/photos/22669391/pexels-photo-22669391.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "url": "",
+    "mainEvent": false
+  },
+  {
+    "id": 4,
     "title": "Nowruz Celebration 2026",
     "date": "March 21, 2026",
     "time": "6:00 PM - 10:00 PM",
@@ -38,19 +52,6 @@
     "description": "Join us for the traditional New Year celebration with cultural performances, traditional food, and community activities. Experience the joy of spring and new beginnings with fellow community members.",
     "memberDiscount": true,
     "image": "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "mainEvent": false
-  },
-  {
-    "id": 4,
-    "title": "Cultural Heritage Workshop",
-    "date": "July 20, 2026",
-    "time": "1:00 PM - 5:00 PM",
-    "location": "Sydney",
-    "category": "Educational",
-    "description": "Learn about Pashtun history, traditions, and cultural practices through interactive workshops, exhibitions, and presentations by cultural experts.",
-    "memberDiscount": true,
-    "image": "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "url": "",
     "mainEvent": false
   }
 ]
