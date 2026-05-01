@@ -117,22 +117,23 @@ function Events() {
                     {event.url ? (
                       event.url.includes("luma.com") || event.url.includes("lu.ma") ? (
                         <a
-                          href={event.donationLink}
+                          href={"/events/" + event.id}
                           className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
                           data-luma-action="checkout"
                         >
-                          Donate and Register
+                          Request to Join
                         </a>
                       ) : (
                         <button
                           className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
-                          onClick={() => window.open(event.donationLink, '_blank')}
+                          onClick={() => window.open("/events/" + event.id, '_blank')}
                         >
-                          Donate and Register
+                          Request to Join
                         </button>
+
                       )
                     ) : (
-                      <button disabled>                     </button>
+                      <button disabled></button>
                     )}
 
                     {event.gallery && (
