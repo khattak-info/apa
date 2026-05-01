@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
+import eventsData from "../data/eventsData.json";
 
 function Home() {
   return (
@@ -31,6 +32,40 @@ function Home() {
                 Support Our Cause
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* Upcoming Events */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
+            <p className="text-lg text-gray-600">Join us for cultural celebrations, educational programs, and community gatherings</p>
+          </div>
+          {eventsData.filter((event) => event.mainEvent).map((event) => (
+            <div key={event.id} className="bg-gray-50 p-6 rounded-lg">
+
+              <Link to={`/events/${event.id}`}>
+                <div className="text-sm text-green-700 font-semibold mb-2">{event.date}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{event.title}</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  {event.description}
+                </p>
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className="w-full h-48 object-cover cursor-pointer"
+                />
+              </Link>
+            </div>
+          ))}
+          <div className="text-center mt-8">
+            <Link
+              to="/events"
+              className="bg-green-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors"
+            >
+              View All Events
+            </Link>
           </div>
         </div>
       </section>
@@ -93,57 +128,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Upcoming Events */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
-            <p className="text-lg text-gray-600">Join us for cultural celebrations, educational programs, and community gatherings</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="text-sm text-green-700 font-semibold mb-2">March 21, 2024</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Nowruz Celebration</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Join us for the traditional New Year celebration with cultural performances, traditional food, and community activities.
-              </p>
-              <Link to="/events" className="text-green-700 font-medium hover:text-green-800">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="text-sm text-green-700 font-semibold mb-2">April 15, 2024</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Poetry Gathering</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                An evening of Pashto poetry, storytelling, and literary discussions celebrating our rich literary heritage.
-              </p>
-              <Link to="/events" className="text-green-700 font-medium hover:text-green-800">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="text-sm text-green-700 font-semibold mb-2">May 8, 2024</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">International Pashto Day</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Celebrating the beauty and importance of the Pashto language with educational workshops and cultural activities.
-              </p>
-              <Link to="/events" className="text-green-700 font-medium hover:text-green-800">
-                Learn More →
-              </Link>
-            </div>
-          </div>
-          <div className="text-center mt-8">
-            <Link
-              to="/events"
-              className="bg-green-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors"
-            >
-              View All Events
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Quote Section */}
       <section className="py-16 bg-gradient-to-r from-green-700 to-green-800 text-white">

@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Members from "./pages/Members";
+import EventsDetails from "./pages/EventsDetails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/events/:id" element={<EventsDetails />} />
         <Route path="/donations" element={<Donations />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/membership" element={<Membership />} />

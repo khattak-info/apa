@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
 import allEvents from "../data/eventsData.json";
+import { Link } from "react-router-dom";
 
 function Events() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -54,11 +55,13 @@ function Events() {
             {filteredEvents.map((event) => (
               <div key={event.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative">
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    className="w-full h-48 object-cover"
-                  />
+                  <Link to={`/events/${event.id}`}>
+                    <img
+                      src={event.image}
+                      alt={event.title}
+                      className="w-full h-48 object-cover cursor-pointer"
+                    />
+                  </Link>
                   <div className="absolute top-4 left-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-semibold ${event.category === "Cultural" ? "bg-green-100 text-green-800" :
                       event.category === "Educational" ? "bg-blue-100 text-blue-800" :
@@ -78,7 +81,11 @@ function Events() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{event.title}</h3>
+                  <Link to={`/events/${event.id}`}>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 cursor-pointer hover:text-green-700">
+                      {event.title}
+                    </h3>
+                  </Link>
 
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center text-gray-600 text-sm">
@@ -102,7 +109,7 @@ function Events() {
                     </div>
                   </div>
 
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-6">
                     {event.description}
                   </p>
 
@@ -110,18 +117,18 @@ function Events() {
                     {event.url ? (
                       event.url.includes("luma.com") || event.url.includes("lu.ma") ? (
                         <a
-                          href={event.url}
+                          href={event.donationLink}
                           className="luma-checkout--button bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm inline-block"
                           data-luma-action="checkout"
                         >
-                          Register Now
+                          Donate and Register to join
                         </a>
                       ) : (
-                        <button 
-                          className="bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm" 
-                          onClick={() => window.open(event.url, '_blank')}
+                        <button
+                          className="bg-green-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
+                          onClick={() => window.open(event.donationLink, '_blank')}
                         >
-                          Register Now
+                          Request to Join
                         </button>
                       )
                     ) : (
@@ -129,6 +136,7 @@ function Events() {
                         Not Available
                       </button>
                     )}
+
                     {event.memberDiscount && (
                       <span className="text-green-700 text-xs font-medium">
                         Discount for members
