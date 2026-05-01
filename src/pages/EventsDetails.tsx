@@ -1,4 +1,4 @@
-import { useParams, Link, href } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import eventsData from "../data/eventsData.json";
 
@@ -37,10 +37,15 @@ function EventDetails() {
         <form action="https://www.paypal.com/donate" method="post" target="_top" className="flex items-center gap-2">
           <input type="hidden" name="campaign_id" value="LSA3FYW4TA82E" />
           <button className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white align-center rounded-lg font-semibold hover:bg-green-700 transition-colors" title="PayPal - The safer, easier way to pay online!">
-            Donate and Register below
+            Donate via Paypal and Register below
           </button>
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+          <p>You can also transfer to APA Donation account<br />
+            <strong>BSB:</strong> 012445 <br />
+            <strong>Account:</strong> 800288903
+          </p>
         </form>
+
         <div className="mt-8" dangerouslySetInnerHTML={{ __html: event.iframe }} />
 
         {/* <img src={event.image} alt={event.title} className="w-full h-96 o?bject-cover rounded-lg mb-8" /> */}
