@@ -9,6 +9,65 @@ function EventDetails() {
   // 2. Find the specific event in your JSON data
   // Note: useParams returns strings, so we convert it to a Number to match your JSON ids
   const event = eventsData.find((e) => e.id === Number(id));
+  const deadline = new Date(event.deadline).getTime();
+  // checking if the deadline is passed
+  if (deadline < Date.now()) {
+    return (
+
+      <Layout>
+        <div id="event-details" className="max-w-4xl mx-auto py-16 px-4">
+          <h1 className="text-3xl font-bold text-red-500" align="center">Event Registration is closed</h1>
+          <Link to="/events" className="text-green-700 hover:underline mb-8 inline-block">
+            &larr; Back to all events
+          </Link>
+          <h1 className="text-2xl font-bold mb-4">{event.title}</h1>
+          <p className="text-lg text-gray-700">{event.description}</p>
+          <br />
+          <div className="mt-8" dangerouslySetInnerHTML={{ __html: event.iframe }} />
+
+          <div className="bg-gray-50 p-6 rounded-lg mb-8">
+            <p><strong>Date:</strong> {event.date}</p>
+            <p><strong>Time:</strong> {event.time}</p>
+            <p><strong>Location:</strong> {event.location}</p>
+            <p><strong>Category:</strong> {event.category}</p>
+          </div>
+        </div>
+      </Layout>
+    );
+  } else {
+    return (
+      <Layout>
+        <div id="event-details" className="max-w-4xl mx-auto py-16 px-4">
+          <Link to="/events" className="text-green-700 hover:underline mb-8 inline-block">
+            &larr; Back to all events
+          </Link>
+          <h1 className="text-2xl font-bold mb-4">{event.title}</h1>
+          <p className="text-lg text-gray-700">{event.description}</p>
+          <br />
+          <form action="https://www.paypal.com/donate" method="post" target="_top" className="flex items-center gap-2">
+            <input type="hidden" name="campaign_id" value="LSA3FYW4TA82E" />
+            <button className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white align-center rounded-lg font-semibold hover:bg-green-700 transition-colors" title="PayPal - The safer, easier way to pay online!">
+              Donate via Paypal and Register below
+            </button>
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            <p>You can also transfer to APA Donation account<br />
+              <strong>BSB:</strong> 012445 <br />
+              <strong>Account:</strong> 800288903
+            </p>
+          </form>
+
+          <div className="mt-8" dangerouslySetInnerHTML={{ __html: event.iframe }} />
+
+          <div className="bg-gray-50 p-6 rounded-lg mb-8">
+            <p><strong>Date:</strong> {event.date}</p>
+            <p><strong>Time:</strong> {event.time}</p>
+            <p><strong>Location:</strong> {event.location}</p>
+            <p><strong>Category:</strong> {event.category}</p>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
 
   // 3. Handle the case where the event ID doesn't exist
   if (!event) {
@@ -24,39 +83,5 @@ function EventDetails() {
     );
   }
 
-  // 4. Render your single event page
-  return (
-    <Layout>
-      <div id="event-details" className="max-w-4xl mx-auto py-16 px-4">
-        <Link to="/events" className="text-green-700 hover:underline mb-8 inline-block">
-          &larr; Back to all events
-        </Link>
-
-        <h1 className="text-2xl font-bold mb-4">{event.title}</h1>
-        <p className="text-lg text-gray-700">{event.description}</p>
-        <br />
-        <form action="https://www.paypal.com/donate" method="post" target="_top" className="flex items-center gap-2">
-          <input type="hidden" name="campaign_id" value="LSA3FYW4TA82E" />
-          <button className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white align-center rounded-lg font-semibold hover:bg-green-700 transition-colors" title="PayPal - The safer, easier way to pay online!">
-            Donate via Paypal and Register below
-          </button>
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-          <p>You can also transfer to APA Donation account<br />
-            <strong>BSB:</strong> 012445 <br />
-            <strong>Account:</strong> 800288903
-          </p>
-        </form>
-
-        <div className="mt-8" dangerouslySetInnerHTML={{ __html: event.iframe }} />
-
-        <div className="bg-gray-50 p-6 rounded-lg mb-8">
-          <p><strong>Date:</strong> {event.date}</p>
-          <p><strong>Time:</strong> {event.time}</p>
-          <p><strong>Location:</strong> {event.location}</p>
-          <p><strong>Category:</strong> {event.category}</p>
-        </div>
-      </div>
-    </Layout>
-  );
 }
 export default EventDetails;
