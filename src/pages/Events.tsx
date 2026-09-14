@@ -1,14 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "../components/Layout";
-import allEvents from "../data/eventsData.json";
 import { Link } from "react-router-dom";
+import { supabase } from "../lib/supabase";
+import type { Tables } from "../types/supabase";
+
+type EventRow = Tables<"events">;
 
 function Events() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [events, setEvents] = useState<EventRow[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const categories = ["All", "Cultural", "Educational", "Youth", "Community"];
 
-  const events = allEvents;
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const { data, error } = await supabase
+        .from("events")
+        .select("*")
+        .order("main_event", { ascending: false })
+        .order("event_date", { ascending: false });
+      if (cancelled) return;
+      if (error) {
+        setError(error.message);
+      } else {
+        setEvents(data ?? []);
+      }
+      setLoading(false);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const filteredEvents = selectedCategory === "All"
     ? events
@@ -51,103 +76,108 @@ function Events() {
       {/* Events Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredEvents.map((event) => (
-              <div key={event.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="relative">
-                  <Link to={`/events/${event.id}`}>
-                    <img
-                      src={event.image}
-                      alt={event.title}
-                      className="w-full h-48 object-cover cursor-pointer"
-                    />
-                  </Link>
-                  <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-semibold ${event.category === "Cultural" ? "bg-green-100 text-green-800" :
-                      event.category === "Educational" ? "bg-blue-100 text-blue-800" :
-                        event.category === "Youth" ? "bg-purple-100 text-purple-800" :
-                          "bg-orange-100 text-orange-800"
-                      }`}>
-                      {event.category}
-                    </span>
-                  </div>
-                  {event.memberDiscount && (
-                    <div className="absolute top-4 right-4">
-                      <span className="bg-red-500 text-white px-2 py-1 rounded text-xs font-semibold">
-                        Member Discount
+          {loading ? (
+            <p className="text-center text-gray-500">Loading events...</p>
+          ) : error ? (
+            <p className="text-center text-red-500">Could not load events: {error}</p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredEvents.map((event) => (
+                <div key={event.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="relative">
+                    <Link to={`/events/${event.legacy_id ?? event.id}`}>
+                      <img
+                        src={event.image_url ?? ""}
+                        alt={event.title}
+                        className="w-full h-48 object-cover cursor-pointer"
+                      />
+                    </Link>
+                    <div className="absolute top-4 left-4">
+                      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${event.category === "Cultural" ? "bg-green-100 text-green-800" :
+                        event.category === "Educational" ? "bg-blue-100 text-blue-800" :
+                          event.category === "Youth" ? "bg-purple-100 text-purple-800" :
+                            "bg-orange-100 text-orange-800"
+                        }`}>
+                        {event.category}
                       </span>
                     </div>
-                  )}
-                </div>
-
-                <div className="p-6">
-                  <Link to={`/events/${event.id}`}>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 cursor-pointer hover:text-green-700">
-                      {event.title}
-                    </h3>
-                  </Link>
-
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center text-gray-600 text-sm">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      {event.date}
-                    </div>
-                    <div className="flex items-center text-gray-600 text-sm">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {event.time}
-                    </div>
-                    <div className="flex items-center text-gray-600 text-sm">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                      {event.location}
-                    </div>
+                    {event.member_discount && (
+                      <div className="absolute top-4 right-4">
+                        <span className="bg-red-500 text-white px-2 py-1 rounded text-xs font-semibold">
+                          Member Discount
+                        </span>
+                      </div>
+                    )}
                   </div>
 
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-6">
-                    {event.description}
-                  </p>
+                  <div className="p-6">
+                    <Link to={`/events/${event.legacy_id ?? event.id}`}>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2 cursor-pointer hover:text-green-700">
+                        {event.title}
+                      </h3>
+                    </Link>
 
-                  <div className="flex items-center justify-between">
-                    {event.url ? (
-                      event.url.includes("luma.com") || event.url.includes("lu.ma") ? (
-                        <a
-                          href={"/events/" + event.id}
-                          className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
-                          data-luma-action="checkout"
-                        >
-                          Request to Join
-                        </a>
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center text-gray-600 text-sm">
+                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        {event.display_date}
+                      </div>
+                      <div className="flex items-center text-gray-600 text-sm">
+                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        {event.start_time}{event.end_time ? ` - ${event.end_time}` : ""}
+                      </div>
+                      <div className="flex items-center text-gray-600 text-sm">
+                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        {event.location}
+                      </div>
+                    </div>
+
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-6">
+                      {event.description}
+                    </p>
+
+                    <div className="flex items-center justify-between">
+                      {event.registration_url ? (
+                        event.registration_url.includes("luma.com") || event.registration_url.includes("lu.ma") ? (
+                          <a
+                            href={"/events/" + (event.legacy_id ?? event.id)}
+                            className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
+                            data-luma-action="checkout"
+                          >
+                            Request to Join
+                          </a>
+                        ) : (
+                          <button
+                            className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
+                            onClick={() => window.open("/events/" + (event.legacy_id ?? event.id), '_blank')}
+                          >
+                            Request to Join
+                          </button>
+                        )
                       ) : (
-                        <button
-                          className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
-                          onClick={() => window.open("/events/" + event.id, '_blank')}
-                        >
-                          Request to Join
-                        </button>
+                        <button disabled></button>
+                      )}
 
-                      )
-                    ) : (
-                      <button disabled></button>
-                    )}
-
-                    {event.gallery && (
-                      <Link to={`/gallery/${event.id}`}>
-                        <button className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm">
-                          View Gallery
-                        </button>
-                      </Link>
-                    )}
+                      {event.gallery_html && (
+                        <Link to={`/gallery/${event.legacy_id ?? event.id}`}>
+                          <button className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm">
+                            View Gallery
+                          </button>
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

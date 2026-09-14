@@ -1,8 +1,25 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import eventsData from "../data/eventsData.json";
+import { supabase } from "../lib/supabase";
+import type { Tables } from "../types/supabase";
+
+type EventRow = Tables<"events">;
 
 function Home() {
+  const [mainEvents, setMainEvents] = useState<EventRow[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const { data } = await supabase.from("events").select("*").eq("main_event", true);
+      if (!cancelled) setMainEvents(data ?? []);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -42,17 +59,17 @@ function Home() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
             <p className="text-lg text-gray-600">Join us for cultural celebrations, educational programs, and community gatherings</p>
           </div>
-          {eventsData.filter((event) => event.mainEvent).map((event) => (
+          {mainEvents.map((event) => (
             <div key={event.id} className="bg-gray-50 p-6 rounded-lg">
 
-              <Link to={`/events/${event.id}`}>
-                <div className="text-sm text-green-700 font-semibold mb-2">{event.date}</div>
+              <Link to={`/events/${event.legacy_id ?? event.id}`}>
+                <div className="text-sm text-green-700 font-semibold mb-2">{event.display_date}</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{event.title}</h3>
                 <p className="text-gray-600 text-sm mb-4">
                   {event.description}
                 </p>
                 <img
-                  src={event.image}
+                  src={event.image_url ?? ""}
                   alt={event.title}
                   className="w-full h-80 object-cover cursor-pointer"
                 />

@@ -1,18 +1,37 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout";
-import eventsData from "../data/eventsData.json";
+import { supabase } from "../lib/supabase";
+import type { Tables } from "../types/supabase";
+
+type EventRow = Tables<"events">;
 
 function EventsGallery() {
-  // 1. Get the event ID from the URL
   const { id } = useParams();
-
-  // 2. Find the specific event in your JSON data
-  // Note: useParams returns strings, so we convert it to a Number to match your JSON ids
-  const event = eventsData.find((e) => e.id === Number(id));
+  const [event, setEvent] = useState<EventRow | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (event?.gallery && event.gallery.includes('picflow.com')) {
+    let cancelled = false;
+    (async () => {
+      setLoading(true);
+      const legacyId = Number(id);
+      const query = Number.isFinite(legacyId)
+        ? supabase.from("events").select("*").eq("legacy_id", legacyId)
+        : supabase.from("events").select("*").eq("id", id);
+      const { data } = await query.maybeSingle();
+      if (!cancelled) {
+        setEvent(data);
+        setLoading(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [id]);
+
+  useEffect(() => {
+    if (event?.gallery_html && event.gallery_html.includes('picflow.com')) {
       if (!(window as any).picflow) {
         (window as any).picflow = true;
         const s = document.createElement('script');
@@ -24,7 +43,16 @@ function EventsGallery() {
     }
   }, [event]);
 
-  // 3. Handle the case where the event ID doesn't exist
+  if (loading) {
+    return (
+      <Layout>
+        <div className="text-center py-20">
+          <p className="text-gray-500">Loading...</p>
+        </div>
+      </Layout>
+    );
+  }
+
   if (!event) {
     return (
       <Layout>
@@ -38,7 +66,8 @@ function EventsGallery() {
     );
   }
 
-  // 4. Render your single event page
+  const timeRange = `${event.start_time ?? ""}${event.end_time ? ` - ${event.end_time}` : ""}`;
+
   return (
     <Layout>
       <div className="max-w-4xl mx-auto py-16 px-4">
@@ -46,16 +75,15 @@ function EventsGallery() {
           &larr; Back to all events
         </Link>
 
-
-        <h1 className="text-4xl font-bold mb-4">Images for the{event.title}</h1>
+        <h1 className="text-4xl font-bold mb-4">Images for the {event.title}</h1>
 
         <div className="bg-gray-50 p-6 rounded-lg mb-8">
-          <p><strong>Date:</strong> {event.date}</p>
-          <p><strong>Time:</strong> {event.time}</p>
+          <p><strong>Date:</strong> {event.display_date}</p>
+          <p><strong>Time:</strong> {timeRange}</p>
           <p><strong>Location:</strong> {event.location}</p>
           <p><strong>Category:</strong> {event.category}</p>
-          {event.gallery && (
-            <div className="mt-8" dangerouslySetInnerHTML={{ __html: event.gallery || "" }} />
+          {event.gallery_html && (
+            <div className="mt-8" dangerouslySetInnerHTML={{ __html: event.gallery_html }} />
           )}
         </div>
       </div>

@@ -1,12 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import allMembers from "../data/councilData.json";
+import { supabase } from "../lib/supabase";
+import type { Tables } from "../types/supabase";
 
-/**
- * Utility function to generate initials for the placeholder image.
- * @param {string} name - The member's full name.
- * @returns {string} The first two initials (e.g., "Intikhab Alam" -> "IA").
- */
+type CouncilRow = Tables<"council_members">;
+
 const getInitials = (name: string) => {
   if (!name) return 'AP';
   const parts = name.split(/\s+/);
@@ -18,6 +16,9 @@ const getInitials = (name: string) => {
 
 function Council() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [members, setMembers] = useState<CouncilRow[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const categories = [
     "All",
@@ -31,11 +32,30 @@ function Council() {
     "Executive Committee Member"
   ];
 
-  const members = allMembers;
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const { data, error } = await supabase
+        .from("council_members")
+        .select("*")
+        .order("display_order", { ascending: true });
+      if (cancelled) return;
+      if (error) {
+        setError(error.message);
+      } else {
+        setMembers(data ?? []);
+      }
+      setLoading(false);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const filteredMembers = selectedCategory === "All"
     ? members
     : members.filter(member => member.role === selectedCategory);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -118,60 +138,64 @@ function Council() {
       {/* Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {filteredMembers.length > 0 ? (
-              filteredMembers.map((member) => (
-                <div key={member.id} className="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                  <div className="relative">
-                    <img
-                      src={member.profile || `https://placehold.co/400x400/10B981/ffffff?text=${getInitials(member.name)}`}
-                      alt={`Profile of ${member.name}`}
-                      className="w-full h-56 object-cover bg-gray-200"
-                    />
+          {loading ? (
+            <p className="text-center text-gray-500">Loading council...</p>
+          ) : error ? (
+            <p className="text-center text-red-500">Could not load council: {error}</p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {filteredMembers.length > 0 ? (
+                filteredMembers.map((member) => (
+                  <div key={member.id} className="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <div className="relative">
+                      <img
+                        src={member.photo_url || `https://placehold.co/400x400/10B981/ffffff?text=${getInitials(member.name)}`}
+                        alt={`Profile of ${member.name}`}
+                        className="w-full h-56 object-cover bg-gray-200"
+                      />
 
-                    <div className="absolute top-4 left-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold shadow-md ${member.role === "President" ? "bg-green-700 text-white" :
-                        member.role === "Vice President" || member.role === "Senior Vice President" ? "bg-blue-600 text-white" :
-                          member.role === "Treasurer/Finance Secretary" ? "bg-purple-600 text-white" :
-                            member.role === "General Secretary" ? "bg-indigo-600 text-white" :
-                              member.role === "Cultural Secretary" ? "bg-amber-500 text-white" :
-                                member.role === "Media Secretary" ? "bg-rose-500 text-white" :
-                                  member.role === "Executive Committee Member" ? "bg-orange-600 text-white" :
-                                    "bg-gray-600 text-white"
-                        }`}>
-                        {member.role}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
-
-                    <div className="space-y-3 mb-4">
-                      <div className="flex items-center text-gray-600 text-sm">
-                        {/* Email Icon */}
-                        <svg className="w-5 h-5 mr-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-17 4v7a2 2 0 002 2h14a2 2 0 002-2v-7" /></svg>
-                        {member.email}
-                      </div>
-                      <div className="flex items-center text-gray-600 text-sm">
-                        {/* Term Icon */}
-                        <svg className="w-5 h-5 mr-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                        Term: {member.term}
+                      <div className="absolute top-4 left-4">
+                        <span className={`px-3 py-1 rounded-full text-xs font-semibold shadow-md ${member.role === "President" ? "bg-green-700 text-white" :
+                          member.role === "Vice President" || member.role === "Senior Vice President" ? "bg-blue-600 text-white" :
+                            member.role === "Treasurer/Finance Secretary" ? "bg-purple-600 text-white" :
+                              member.role === "General Secretary" ? "bg-indigo-600 text-white" :
+                                member.role === "Cultural Secretary" ? "bg-amber-500 text-white" :
+                                  member.role === "Media Secretary" ? "bg-rose-500 text-white" :
+                                    member.role === "Executive Committee Member" ? "bg-orange-600 text-white" :
+                                      "bg-gray-600 text-white"
+                          }`}>
+                          {member.role}
+                        </span>
                       </div>
                     </div>
 
-                    <p className="text-gray-700 text-base line-clamp-4">
-                      {member.description}
-                    </p>
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
+
+                      <div className="space-y-3 mb-4">
+                        <div className="flex items-center text-gray-600 text-sm">
+                          <svg className="w-5 h-5 mr-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-17 4v7a2 2 0 002 2h14a2 2 0 002-2v-7" /></svg>
+                          {member.email}
+                        </div>
+                        <div className="flex items-center text-gray-600 text-sm">
+                          <svg className="w-5 h-5 mr-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                          Term: {member.term}
+                        </div>
+                      </div>
+
+                      <p className="text-gray-700 text-base line-clamp-4">
+                        {member.description}
+                      </p>
+                    </div>
                   </div>
+                ))
+              ) : (
+                <div className="md:col-span-3 text-center p-12 bg-white rounded-xl shadow-lg">
+                  <p className="text-xl text-gray-600">No members found in the '{selectedCategory}' category.</p>
                 </div>
-              ))
-            ) : (
-              <div className="md:col-span-3 text-center p-12 bg-white rounded-xl shadow-lg">
-                <p className="text-xl text-gray-600">No members found in the '{selectedCategory}' category.</p>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          )}
         </div>
       </section>
     </Layout>
