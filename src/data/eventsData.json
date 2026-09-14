@@ -61,11 +61,11 @@
     "title": "Pashtun Culture Day",
     "date": "October 10, 2026",
     "time": "11:00 AM - 3:00 PM",
-    "location": "Granville Centre, 2a Memorial Dr, Granville NSW 2142 ",
+    "location": "Granville Centre, 2a Memorial Dr, Granville NSW 2142",
     "category": "Community",
     "description": "Join us and participate in a variety of activities including Pashtun Dress show, Pashtu Mushaira, Cultural performances including Music and Attan, along with Traditional Food and other interesting activities for children.",
     "memberDiscount": false,
     "image": "https://images.pexels.com/photos/7249766/pexels-photo-7249766.jpeg?auto=compress&cs=tinysrgb&w=800",
     "mainEvent": true
-  },
+  }
 ]
