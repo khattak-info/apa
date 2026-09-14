@@ -2,7 +2,6 @@
   "name": "template-react-vite",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
@@ -10,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@netlify/emails": "^1.1.0",
     "@supabase/supabase-js": "^2.116.0",
     "framer-motion": "^12.4.7",
     "lucide-react": "^0.477.0",

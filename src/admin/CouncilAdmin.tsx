@@ -83,8 +83,8 @@ function CouncilAdmin() {
     try {
       const url = await uploadMediaFile(file, "council");
       setEditing({ ...editing, photo_url: url });
-    } catch (err: any) {
-      setError(err.message ?? "Upload failed");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Upload failed");
     } finally {
       setUploading(false);
     }

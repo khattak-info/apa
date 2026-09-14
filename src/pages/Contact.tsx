@@ -1,6 +1,41 @@
+import { useState } from "react";
 import Layout from "../components/Layout";
 
+type Status = "idle" | "submitting" | "success" | "error";
+
 function Contact() {
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [status, setStatus] = useState<Status>("idle");
+  const [error, setError] = useState<string | null>(null);
+
+  const handleChange = (field: keyof typeof form) => (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [field]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("submitting");
+    setError(null);
+    try {
+      const res = await fetch("/.netlify/functions/contact-submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || "Something went wrong sending your message.");
+      }
+      setStatus("success");
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      setStatus("error");
+      setError(err instanceof Error ? err.message : "Something went wrong sending your message.");
+    }
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -20,77 +55,104 @@ function Contact() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-50 p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Send Us a Message</h2>
-            <form name="contact" method="POST" data-netlify="true" className="space-y-6" netlify>
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
-                  placeholder="Enter your full name"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
-                  placeholder="Enter your email address"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Question Regarding
-                </label>
-                <select
-                  name="subject"
-                  id="subject"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
-                >
-                  <option value="">Select a topic</option>
-                  <option value="membership">Membership</option>
-                  <option value="events">Events</option>
-                  <option value="volunteering">Volunteering</option>
-                  <option value="general">General Inquiry</option>
-                  <option value="support">Community Support</option>
-                </select>
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  id="message"
-                  rows={6}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors resize-vertical"
-                  placeholder="Please provide details about your inquiry..."
-                />
-              </div>
-              
-              <div className="text-center">
+
+            {status === "success" ? (
+              <div className="text-center py-8">
+                <p className="text-green-700 font-semibold text-lg mb-2">Message sent!</p>
+                <p className="text-gray-600">Thanks for reaching out — we've emailed you a confirmation and will get back to you soon.</p>
                 <button
-                  type="submit"
-                  className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                  onClick={() => setStatus("idle")}
+                  className="mt-6 text-green-700 hover:underline text-sm"
                 >
-                  Send Message
+                  Send another message
                 </button>
               </div>
-            </form>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    value={form.name}
+                    onChange={handleChange("name")}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Your Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    value={form.email}
+                    onChange={handleChange("email")}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    Question Regarding
+                  </label>
+                  <select
+                    name="subject"
+                    id="subject"
+                    required
+                    value={form.subject}
+                    onChange={handleChange("subject")}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                  >
+                    <option value="">Select a topic</option>
+                    <option value="membership">Membership</option>
+                    <option value="events">Events</option>
+                    <option value="volunteering">Volunteering</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Community Support</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows={6}
+                    required
+                    value={form.message}
+                    onChange={handleChange("message")}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors resize-vertical"
+                    placeholder="Please provide details about your inquiry..."
+                  />
+                </div>
+
+                {status === "error" && (
+                  <p className="text-red-500 text-sm text-center">{error}</p>
+                )}
+
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    disabled={status === "submitting"}
+                    className="bg-green-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors focus:ring-2 focus:ring-green-500 focus:ring-offset-2 disabled:opacity-50"
+                  >
+                    {status === "submitting" ? "Sending..." : "Send Message"}
+                  </button>
+                </div>
+              </form>
+            )}
             <p className="text-xs text-gray-400 mt-6 text-center">We respect your privacy. Your information will only be used to respond to your inquiry.</p>
           </div>
         </div>

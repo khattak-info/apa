@@ -83,8 +83,8 @@ function EventsAdmin() {
     try {
       const url = await uploadMediaFile(file, "events");
       setEditing({ ...editing, image_url: url });
-    } catch (err: any) {
-      setError(err.message ?? "Upload failed");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Upload failed");
     } finally {
       setUploadingImage(false);
     }
