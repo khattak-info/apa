@@ -1,0 +1,42 @@
+[
+    {
+        "id": 3,
+        "name": "Ali Nangial",
+        "role": "Senior Advisor",
+        "description": "Supports leadership decisions and community engagement with senior-level advice and perspective.",
+        "email": "senior.advisor@pashtun.org.au",
+        "term": "2026-2028"
+    },
+    {
+        "id": 4,
+        "name": "Zainullah Khan",
+        "role": "Senior Advisor",
+        "description": "Contributes policy insight and strategic support for the association's initiatives and representation.",
+        "email": "senior.advisor@pashtun.org.au",
+        "term": "2026-2028"
+    },
+    {
+        "id": 13,
+        "name": "Abdullah Ali Khail",
+        "role": "Senior Advisor",
+        "description": "Brings senior-level counsel and community insight to guide organizational decision-making.",
+        "email": "senior.advisor@pashtun.org.au",
+        "term": "2026-2028"
+    },
+    {
+        "id": 15,
+        "name": "Malik Juma Khan",
+        "role": "Senior Advisor",
+        "description": "Provides strategic guidance and advisory support to the leadership and governance of the organization.",
+        "email": "senior.advisor@pashtun.org.au",
+        "term": "2026-2028"
+    },
+    {
+        "id": 12,
+        "name": "Dr Rehman Shinwari",
+        "role": "Senior Advisor",
+        "description": "Advises leadership on strategic direction, governance, and community representation matters.",
+        "email": "senior.advisor@pashtun.org.au",
+        "term": "2026-2028"
+    }
+]

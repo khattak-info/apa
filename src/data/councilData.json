@@ -10,30 +10,12 @@
     },
     {
         "id": 2,
-        "name": "Malik Juma Khan",
-        "role": "Senior Advisor",
-        "description": "Provides strategic guidance and advisory support to the leadership and governance of the organization.",
-        "email": "senior.advisor@pashtun.org.au",
+        "name": "Dr Hasan Ali Khattak",
+        "role": "Vice President",
+        "description": "Promotes strategic coordination, executive leadership support, and community engagement priorities.",
+        "email": "vice.president@pashtun.org.au",
         "term": "2026-2028",
-        "profile": "/images/council/malik_juma_khan.jpeg"
-    },
-    {
-        "id": 3,
-        "name": "Ali Nangial",
-        "role": "Senior Advisor",
-        "description": "Supports leadership decisions and community engagement with senior-level advice and perspective.",
-        "email": "senior.advisor@pashtun.org.au",
-        "term": "2026-2028",
-        "profile": "/images/council/ali_nangial.jpeg"
-    },
-    {
-        "id": 4,
-        "name": "Zainullah Khan",
-        "role": "Senior Advisor",
-        "description": "Contributes policy insight and strategic support for the association's initiatives and representation.",
-        "email": "senior.advisor@pashtun.org.au",
-        "term": "2026-2028",
-        "profile": "/images/council/zainullah_khan.jpeg"
+        "profile": "/images/council/hasan_khattak.JPG"
     },
     {
         "id": 5,
@@ -50,8 +32,7 @@
         "role": "Vice President",
         "description": "Supports executive leadership, strategic planning, and community representation within the association.",
         "email": "vice.president@pashtun.org.au",
-        "term": "2026-2028",
-        "profile": "/images/council/jan_zeb_shah.jpeg"
+        "term": "2026-2028"
     },
     {
         "id": 7,
@@ -59,8 +40,7 @@
         "role": "Cultural Secretary",
         "description": "Promotes cultural preservation, community identity, and heritage activities within the Pashtun community.",
         "email": "cultural.secretary@pashtun.org.au",
-        "term": "2026-2028",
-        "profile": "/images/council/zahid_sabavoun.jpeg"
+        "term": "2026-2028"
     },
     {
         "id": 8,
@@ -86,8 +66,7 @@
         "role": "Executive Committee Member",
         "description": "Supports governance, planning, and community-focused decision-making across association initiatives.",
         "email": "committee.member@pashtun.org.au",
-        "term": "2026-2028",
-        "profile": "/images/council/inayat_ur_rehman.jpeg"
+        "term": "2026-2028"
     },
     {
         "id": 11,
@@ -95,26 +74,7 @@
         "role": "Executive Committee Member",
         "description": "Provides specialist advice and supports the association's strategic and operational priorities.",
         "email": "committee.member@pashtun.org.au",
-        "term": "2026-2028",
-        "profile": "/images/council/shuja_ul_islam.jpeg"
-    },
-    {
-        "id": 12,
-        "name": "Dr Rehman Shinwari",
-        "role": "Senior Advisor",
-        "description": "Advises leadership on strategic direction, governance, and community representation matters.",
-        "email": "senior.advisor@pashtun.org.au",
-        "term": "2026-2028",
-        "profile": "/images/council/rehman_shinwari.jpeg"
-    },
-    {
-        "id": 13,
-        "name": "Abdullah Ali Khail",
-        "role": "Senior Advisor",
-        "description": "Brings senior-level counsel and community insight to guide organizational decision-making.",
-        "email": "senior.advisor@pashtun.org.au",
-        "term": "2026-2028",
-        "profile": "/images/council/abdullah_ali_khail.jpeg"
+        "term": "2026-2028"
     },
     {
         "id": 14,
@@ -126,22 +86,12 @@
         "profile": "/images/council/iftikhar_ahmad.jpg"
     },
     {
-        "id": 15,
-        "name": "Dr Hasan Ali Khattak",
-        "role": "Vice President",
-        "description": "Promotes strategic coordination, executive leadership support, and community engagement priorities.",
-        "email": "vice.president@pashtun.org.au",
-        "term": "2026-2028",
-        "profile": "/images/council/hasan_khattak.JPG"
-    },
-    {
         "id": 16,
         "name": "Dr Fazlullah Khan",
         "role": "Executive Committee Member",
         "description": "Contributes to project delivery, committee oversight, and community advocacy efforts.",
         "email": "committee.member@pashtun.org.au",
-        "term": "2026-2028",
-        "profile": "/images/council/fazlullah_khan.jpeg"
+        "term": "2026-2028"
     },
     {
         "id": 17,

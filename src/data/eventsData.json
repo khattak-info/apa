@@ -1,16 +1,16 @@
 [
   {
-    "id": 1,
-    "title": "Eid ul-Fitr Community Gathering 2026",
-    "date": "March 21, 2026",
+    "id": 3,
+    "title": "Pashtun Culture Day 2026",
+    "date": "October 10, 2026",
+    "url": "https://luma.com/cyvsnlhy",
     "time": "11:00 AM - 3:00 PM",
-    "location": "Canterbury Rd, Wiley Park NSW 2195 Sydney",
+    "location": "Granville Centre, 2a Memorial Dr, Granville NSW 2142",
     "category": "Community",
-    "description": "Celebrate Eid ul-Fitr with the entire Australian Pashtun Association (APA). Join us for prayers, traditional feast, children's activities, and community bonding in a festive atmosphere.",
+    "description": "Celebrate Pashtun Culture Day with the Australian Pashtun Association (APA). Join us for a day of cultural celebration, traditional food, music, and entertainment.",
     "memberDiscount": false,
-    "image": "https://images.pexels.com/photos/7249766/pexels-photo-7249766.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "mainEvent": false,
-    "gallery": "<script>if(!window.picflow){window.picflow=!0;var s=document.createElement('script');s.src='https://picflow.com/embed/main.js';s.type='module';s.defer=true;document.head.appendChild(s);}</script><picflow-gallery id='gal_p9y8QCPHGGzjBPWz' tenant='tnt_0BGxpBSfnDomaloR' lightbox='#000000E6' no-padding='true' no-background='true' show-cover='true'><p style='font-size:12px;color:#999;font-family:sans-serif'>Client gallery powered by <a href='https://picflow.com'>Picflow</a></p></picflow-gallery>"
+    "image": "/images/event/PashtunCulturalDay2026.png",
+    "mainEvent": true
   },
   {
     "id": 2,
@@ -23,49 +23,24 @@
     "memberDiscount": false,
     "image1": "https://images.pexels.com/photos/533325/pexels-photo-533325.jpeg?auto=compress&cs=tinysrgb&w=800",
     "image": "https://i.imgur.com/k8yRvoz.jpeg",
-    "url": "https://luma.com/cyvsnlhy",
     "donationLink": "https://www.paypal.com/donate/?campaign_id=LSA3FYW4TA82E",
     "iframe": "<iframe src='https://luma.com/embed/event/evt-c6J4HZkWhTLgP0G/simple' width='100%' height='600px' frameborder='0' allow='clipboard-read; clipboard-write' aria-hidden='false' tabindex='0' style='border-radius: 8px;'></iframe>",
     "iframeDonation": "<iframe src='https://www.paypal.com/giving/campaigns?campaign_id=LSA3FYW4TA82E' title='PayPal donations to Australian Pashtun Association' frameborder='0' width='100%' height=60 scrolling='no'></iframe>",
-    "mainEvent": true,
+    "mainEvent": false,
     "deadline": "2026-05-27T13:59:00Z",
     "gallery": "<script>if(!window.picflow){window.picflow=!0;var s=document.createElement('script');s.src='https://picflow.com/embed/main.js';s.type='module';s.defer=true;document.head.appendChild(s);}</script><picflow-gallery id='gal_50OxjWXL9EjV7E2c' tenant='tnt_0BGxpBSfnDomaloR' lightbox='#000000E6' no-padding='true' no-background='true' show-cover='true'><p style='font-size:12px;color:#999;font-family:sans-serif'>Client gallery powered by <a href='https://picflow.com'>Picflow</a></p></picflow-gallery>"
   },
   {
-    "id": 3,
-    "title": "Cultural Heritage Workshop",
-    "date": "July 20, 2026",
-    "time": "1:00 PM - 5:00 PM",
-    "location": "Sydney",
-    "category": "Educational",
-    "description": "Learn about Pashtun history, traditions, and cultural practices through interactive workshops, exhibitions, and presentations by cultural experts.",
-    "memberDiscount": true,
-    "image": "https://images.pexels.com/photos/22669391/pexels-photo-22669391.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "url": "",
-    "mainEvent": false
-  },
-  {
-    "id": 4,
-    "title": "Nowruz Celebration 2026",
+    "id": 1,
+    "title": "Eid ul-Fitr Community Gathering 2026",
     "date": "March 21, 2026",
-    "time": "6:00 PM - 10:00 PM",
-    "location": "Community Centre, Auburn, Sydney",
-    "category": "Cultural",
-    "description": "Join us for the traditional New Year celebration with cultural performances, traditional food, and community activities. Experience the joy of spring and new beginnings with fellow community members.",
-    "memberDiscount": true,
-    "image": "https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "mainEvent": false
-  },
-  {
-    "id": 5,
-    "title": "Pashtun Culture Day",
-    "date": "October 10, 2026",
     "time": "11:00 AM - 3:00 PM",
-    "location": "Granville Centre, 2a Memorial Dr, Granville NSW 2142",
+    "location": "Canterbury Rd, Wiley Park NSW 2195 Sydney",
     "category": "Community",
-    "description": "Join us and participate in a variety of activities including Pashtun Dress show, Pashtu Mushaira, Cultural performances including Music and Attan, along with Traditional Food and other interesting activities for children.",
+    "description": "Celebrate Eid ul-Fitr with the entire Australian Pashtun Association (APA). Join us for prayers, traditional feast, children's activities, and community bonding in a festive atmosphere.",
     "memberDiscount": false,
     "image": "https://images.pexels.com/photos/7249766/pexels-photo-7249766.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "mainEvent": true
+    "mainEvent": false,
+    "gallery": "<script>if(!window.picflow){window.picflow=!0;var s=document.createElement('script');s.src='https://picflow.com/embed/main.js';s.type='module';s.defer=true;document.head.appendChild(s);}</script><picflow-gallery id='gal_p9y8QCPHGGzjBPWz' tenant='tnt_0BGxpBSfnDomaloR' lightbox='#000000E6' no-padding='true' no-background='true' show-cover='true'><p style='font-size:12px;color:#999;font-family:sans-serif'>Client gallery powered by <a href='https://picflow.com'>Picflow</a></p></picflow-gallery>"
   }
 ]

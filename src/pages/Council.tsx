@@ -28,7 +28,6 @@ function Council() {
     "Cultural Secretary",
     "Media Secretary",
     "Treasurer/Finance Secretary",
-    "Senior Advisor",
     "Executive Committee Member"
   ];
 
@@ -137,9 +136,8 @@ function Council() {
                             member.role === "General Secretary" ? "bg-indigo-600 text-white" :
                               member.role === "Cultural Secretary" ? "bg-amber-500 text-white" :
                                 member.role === "Media Secretary" ? "bg-rose-500 text-white" :
-                                  member.role === "Senior Advisor" ? "bg-slate-600 text-white" :
-                                    member.role === "Executive Committee Member" ? "bg-orange-600 text-white" :
-                                      "bg-gray-600 text-white"
+                                  member.role === "Executive Committee Member" ? "bg-orange-600 text-white" :
+                                    "bg-gray-600 text-white"
                         }`}>
                         {member.role}
                       </span>
