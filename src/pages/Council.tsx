@@ -19,7 +19,18 @@ const getInitials = (name: string) => {
 function Council() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "President", "Vice President", "Treasurer", "Committee Member"];
+  const categories = [
+    "All",
+    "President",
+    "Senior Vice President",
+    "Vice President",
+    "General Secretary",
+    "Cultural Secretary",
+    "Media Secretary",
+    "Treasurer/Finance Secretary",
+    "Senior Advisor",
+    "Executive Committee Member"
+  ];
 
   const members = allMembers;
 
@@ -121,10 +132,14 @@ function Council() {
 
                     <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-semibold shadow-md ${member.role === "President" ? "bg-green-700 text-white" :
-                        member.role === "Vice President" ? "bg-blue-600 text-white" :
-                          member.role === "Treasurer" ? "bg-purple-600 text-white" :
-                            member.role === "Committee Member" ? "bg-orange-600 text-white" :
-                              "bg-gray-600 text-white"
+                        member.role === "Vice President" || member.role === "Senior Vice President" ? "bg-blue-600 text-white" :
+                          member.role === "Treasurer/Finance Secretary" ? "bg-purple-600 text-white" :
+                            member.role === "General Secretary" ? "bg-indigo-600 text-white" :
+                              member.role === "Cultural Secretary" ? "bg-amber-500 text-white" :
+                                member.role === "Media Secretary" ? "bg-rose-500 text-white" :
+                                  member.role === "Senior Advisor" ? "bg-slate-600 text-white" :
+                                    member.role === "Executive Committee Member" ? "bg-orange-600 text-white" :
+                                      "bg-gray-600 text-white"
                         }`}>
                         {member.role}
                       </span>

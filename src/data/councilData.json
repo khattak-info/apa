@@ -5,63 +5,178 @@
         "role": "President",
         "description": "Responsible for leading the board and ensuring effective governance of the organization.",
         "email": "president@pashtun.org.au",
-        "term": "2025-2026"
+        "term": "2026-2028",
+        "profile": "/images/council/intialam.jpeg"
     },
     {
         "id": 2,
-        "name": "Hasan Ali Khattak",
-        "role": "Vice President",
-        "description": "Supports the Chairperson and acts in their absence, assists with strategic planning.",
-        "email": "vice.president@pashtun.org.au",
-        "term": "2025-2026"
+        "name": "Malik Juma Khan",
+        "role": "Senior Advisor",
+        "description": "Provides strategic guidance and advisory support to the leadership and governance of the organization.",
+        "email": "senior.advisor@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/malik_juma_khan.jpeg"
     },
     {
         "id": 3,
-        "name": "Mazhar Alam",
-        "role": "Treasurer",
-        "description": "Oversees financial management, budgeting, and financial reporting for the organization.",
-        "email": "tresurer@pashtun.org.au",
-        "term": "2025-2026",
-        "profile": "/images/council/mazhar_alam.jpeg"
+        "name": "Ali Nangial",
+        "role": "Senior Advisor",
+        "description": "Supports leadership decisions and community engagement with senior-level advice and perspective.",
+        "email": "senior.advisor@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/ali_nangial.jpeg"
     },
     {
         "id": 4,
-        "name": "Iftikhar Ahmad",
-        "role": "Committee Member",
-        "description": "Maintains records, manages correspondence, and ensures compliance with regulatory requirements.",
-        "email": "committee.member@pashtun.org.au",
-        "term": "2025-2026"
+        "name": "Zainullah Khan",
+        "role": "Senior Advisor",
+        "description": "Contributes policy insight and strategic support for the association's initiatives and representation.",
+        "email": "senior.advisor@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/zainullah_khan.jpeg"
     },
     {
         "id": 5,
-        "name": "Ibrahim Shah",
-        "role": "Committee Member",
-        "description": "Contributes to strategic decision-making and supports the organization's mission and objectives.",
-        "email": "committee.member@pashtun.org.au",
-        "term": "2025-2026"
+        "name": "Prof. Ahmad Saeed",
+        "role": "General Secretary",
+        "description": "Coordinates administrative activities, communications, and organizational operations across the association.",
+        "email": "general.secretary@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/ahmad_saeed.jpeg"
     },
     {
         "id": 6,
-        "name": "Shah Hussain Khan",
+        "name": "Jan Zeb Shah",
         "role": "Vice President",
-        "description": "Provides expertise in community engagement and program development.",
+        "description": "Supports executive leadership, strategic planning, and community representation within the association.",
         "email": "vice.president@pashtun.org.au",
-        "term": "2025-2026"
+        "term": "2026-2028",
+        "profile": "/images/council/jan_zeb_shah.jpeg"
     },
     {
         "id": 7,
-        "name": "Jahanzib Shah Said",
-        "role": "Vice President",
-        "description": "Assists in organizing events and community outreach initiatives.",
-        "email": "vice.president@pashtun.org.au",
-        "term": "2025-2026"
+        "name": "Zahid Sabavoun",
+        "role": "Cultural Secretary",
+        "description": "Promotes cultural preservation, community identity, and heritage activities within the Pashtun community.",
+        "email": "cultural.secretary@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/zahid_sabavoun.jpeg"
     },
     {
         "id": 8,
-        "name": "Saghed Sabavoun",
-        "role": "Committee Member",
-        "description": "Supports the board in governance and compliance matters.",
+        "name": "Asif Shahzad",
+        "role": "Media Secretary",
+        "description": "Leads communication, public messaging, and media coordination for the association's outreach work.",
+        "email": "media.secretary@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/asif_shahzad.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Ajmal Khan",
+        "role": "Executive Committee Member",
+        "description": "Contributes to committee decisions, policy discussions, and the implementation of the association's mission.",
         "email": "committee.member@pashtun.org.au",
-        "term": "2025-2026"
+        "term": "2026-2028",
+        "profile": "/images/council/mohammad_ajmal.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Inayat Ur Rehman",
+        "role": "Executive Committee Member",
+        "description": "Supports governance, planning, and community-focused decision-making across association initiatives.",
+        "email": "committee.member@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/inayat_ur_rehman.jpeg"
+    },
+    {
+        "id": 11,
+        "name": "Dr Shuja Ul Islam",
+        "role": "Executive Committee Member",
+        "description": "Provides specialist advice and supports the association's strategic and operational priorities.",
+        "email": "committee.member@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/shuja_ul_islam.jpeg"
+    },
+    {
+        "id": 12,
+        "name": "Dr Rehman Shinwari",
+        "role": "Senior Advisor",
+        "description": "Advises leadership on strategic direction, governance, and community representation matters.",
+        "email": "senior.advisor@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/rehman_shinwari.jpeg"
+    },
+    {
+        "id": 13,
+        "name": "Abdullah Ali Khail",
+        "role": "Senior Advisor",
+        "description": "Brings senior-level counsel and community insight to guide organizational decision-making.",
+        "email": "senior.advisor@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/abdullah_ali_khail.jpeg"
+    },
+    {
+        "id": 14,
+        "name": "Dr Iftikhar Ahmad",
+        "role": "Senior Vice President",
+        "description": "Supports the President and executive team in leadership, governance, and organizational oversight.",
+        "email": "senior.vice.president@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/iftikhar_ahmad.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Dr Hasan Ali Khattak",
+        "role": "Vice President",
+        "description": "Promotes strategic coordination, executive leadership support, and community engagement priorities.",
+        "email": "vice.president@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/hasan_khattak.JPG"
+    },
+    {
+        "id": 16,
+        "name": "Dr Fazlullah Khan",
+        "role": "Executive Committee Member",
+        "description": "Contributes to project delivery, committee oversight, and community advocacy efforts.",
+        "email": "committee.member@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/fazlullah_khan.jpeg"
+    },
+    {
+        "id": 17,
+        "name": "Muhammad Imran Afzal",
+        "role": "Executive Committee Member",
+        "description": "Supports strategic planning, governance coordination, and member engagement initiatives.",
+        "email": "committee.member@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/imran_afzal.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Dr Zawar Hussain",
+        "role": "Executive Committee Member",
+        "description": "Assists with community initiatives, governance activities, and committee-level execution of goals.",
+        "email": "committee.member@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/zawar_hussain.jpeg"
+    },
+    {
+        "id": 19,
+        "name": "Mazhar Alam",
+        "role": "Treasurer/Finance Secretary",
+        "description": "Oversees budgeting, financial reporting, and the financial health of the association.",
+        "email": "treasurer@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/mazhar_alam.jpeg"
+    },
+    {
+        "id": 20,
+        "name": "Ibrahim Shah",
+        "role": "Executive Committee Member",
+        "description": "Contributes to strategic decisions, governance oversight, and member engagement activities.",
+        "email": "committee.member@pashtun.org.au",
+        "term": "2026-2028",
+        "profile": "/images/council/ibrahim_shah.jpeg"
     }
 ]
