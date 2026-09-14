@@ -41,3 +41,8 @@
 - **Immediate**: Not specified
 - **Future**: Not specified
 ```
+
+# Testing the app
+- Install dependencies: `npm install`
+- Run `npm run dev` to start the development server.
+- Open `http://localhost:5173/` in your browser.
