@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Curved path for top circular text: AUSTRALIAN -->
+    <path id="textPathTop" d="M 100 300 A 200 200 0 0 1 500 300" />
+    <!-- Curved path for bottom circular text: PASHTUN ASSOCIATION -->
+    <path id="textPathBottom" d="M 85 300 A 215 215 0 0 0 515 300" />
+  </defs>
+
+  <style>
+    .arc-text {
+      font-family: Arial Black, Impact, sans-serif;
+      font-weight: 900;
+      font-size: 38px;
+      fill: #F4E4BC;
+      letter-spacing: 3px;
+    }
+  </style>
+
+  <!-- Outer Dark Green Circle Frame -->
+  <circle cx="300" cy="300" r="290" fill="#1C381E" stroke="#0F2111" stroke-width="8" />
+  <circle cx="300" cy="300" r="260" fill="none" stroke="#2B522E" stroke-width="4" />
+
+  <!-- Inner Dark/Forest Green Background -->
+  <circle cx="300" cy="300" r="255" fill="#244426" />
+
+  <!-- Center Artwork Region -->
+  <g id="artwork">
+    <!-- Sky / Upper background fill -->
+    <path d="M 60 300 A 240 240 0 0 1 540 300 Z" fill="#2B542E" />
+
+    <!-- Australian Flag (Top Center) -->
+    <g id="australian-flag" transform="translate(230, 115)">
+      <rect x="0" y="0" width="140" height="85" fill="#D34428" stroke="#F4E4BC" stroke-width="2" />
+      <!-- Union Jack style cross lines -->
+      <path d="M 0 0 L 140 85 M 140 0 L 0 85" stroke="#F4E4BC" stroke-width="12" />
+      <path d="M 0 0 L 140 85 M 140 0 L 0 85" stroke="#D34428" stroke-width="6" />
+      <path d="M 70 0 V 85 M 0 42.5 H 140" stroke="#F4E4BC" stroke-width="18" />
+      <path d="M 70 0 V 85 M 0 42.5 H 140" stroke="#D34428" stroke-width="10" />
+    </g>
+
+    <!-- Southern Cross Stars (Right Side) -->
+    <g id="southern-cross" fill="#F4E4BC">
+      <!-- Gamma Crucis -->
+      <polygon points="415,170 417,175 423,175 418,179 420,185 415,181 410,185 412,179 407,175 413,175" />
+      <!-- Beta Crucis -->
+      <polygon points="390,200 392,205 398,205 393,209 395,215 390,211 385,215 387,209 382,205 388,205" />
+      <!-- Delta Crucis -->
+      <polygon points="445,200 447,205 453,205 448,209 450,215 445,211 440,215 442,209 437,205 443,205" />
+      <!-- Epsilon Crucis -->
+      <polygon points="425,225 426,229 430,229 427,232 428,236 425,233 422,236 423,232 420,229 424,229" />
+      <!-- Alpha Crucis -->
+      <polygon points="425,250 427,255 433,255 428,259 430,265 425,261 420,265 422,259 417,255 423,255" />
+    </g>
+
+    <!-- Bab-e-Khyber Fortress Structure -->
+    <g id="fortress" fill="#B78628" stroke="#1C381E" stroke-width="3">
+      <!-- Left Tower -->
+      <rect x="145" y="215" width="42" height="110" />
+      <path d="M 143 215 h 46 v -12 h -8 v 5 h -10 v -5 h -10 v 5 h -10 v -5 h -8 z" fill="#B78628" />
+      <rect x="160" y="250" width="10" height="22" rx="5" fill="#1C381E" />
+
+      <!-- Center Arch & Wall -->
+      <rect x="187" y="235" width="80" height="90" />
+      <path d="M 187 235 h 80 v -10 h -10 v 4 h -12 v -4 h -12 v 4 h -12 v -4 h -12 v 4 h -10 v -4 h -12 z" fill="#B78628" />
+      <!-- Main Arch Gate Entrance -->
+      <path d="M 205 325 V 280 A 22 22 0 0 1 249 280 V 325 Z" fill="#1C381E" />
+
+      <!-- Right Tower -->
+      <rect x="267" y="215" width="42" height="110" />
+      <path d="M 265 215 h 46 v -12 h -8 v 5 h -10 v -5 h -10 v 5 h -10 v -5 h -8 z" fill="#B78628" />
+      <rect x="283" y="250" width="10" height="22" rx="5" fill="#1C381E" />
+    </g>
+
+    <!-- Camel Silhouette (Right Foreground) -->
+    <g id="camel" fill="#C5932A" stroke="#1C381E" stroke-width="3">
+      <!-- Body & Hump -->
+      <path d="M 345,255 C 355,230 395,225 425,235 C 455,245 480,270 470,330 
+               C 460,340 465,370 460,390 L 448,390 L 452,340 
+               L 435,340 L 430,390 L 418,390 L 425,320 
+               L 410,320 L 402,390 L 390,390 L 398,310 
+               L 380,390 L 368,390 L 376,295 
+               C 360,290 345,275 345,255 Z" />
+      <!-- Head and Neck -->
+      <path d="M 345,255 C 340,240 348,230 360,232 C 372,234 378,245 372,260 Z" />
+    </g>
+
+    <!-- Winding Golden Road & Hills -->
+    <g id="hills-and-road">
+      <path d="M 75 320 Q 200 300 300 340 T 525 330 L 545 450 Q 300 500 55 420 Z" fill="#1B381C" />
+      <path d="M 125 365 Q 240 300 300 360 Q 150 490 220 465 Z" fill="#B78628" stroke="#1C381E" stroke-width="2" />
+    </g>
+
+    <!-- Turban / Pagri (Top Left Iconography) -->
+    <g id="turban" transform="translate(60, 45)">
+      <!-- Fan/Kulla crest & wrap folds -->
+      <path d="M 110,60 C 50,45 40,140 100,160 C 170,180 210,100 170,60 C 140,30 130,20 110,60 Z" fill="#E8CD8C" stroke="#1C381E" stroke-width="5" />
+      <path d="M 70,110 C 110,70 160,80 180,120" stroke="#1C381E" stroke-width="4" fill="none" />
+      <path d="M 85,135 C 125,95 165,110 185,145" stroke="#1C381E" stroke-width="4" fill="none" />
+      <!-- Hanging Shamla tail -->
+      <path d="M 95,155 C 80,180 85,220 100,245 C 115,225 125,185 110,160 Z" fill="#E8CD8C" stroke="#1C381E" stroke-width="4" />
+      <path d="M 60,60 C 110,110 120,180 60,230 Z" fill="#2B542E" stroke="#1C381E" stroke-width="4" />
+    </g>
+  </g>
+
+  <!-- Circular Text Along Outer Ring -->
+  <text class="arc-text">
+    <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">AUSTRALIAN</textPath>
+  </text>
+  <text class="arc-text">
+    <textPath href="#textPathBottom" startOffset="50%" text-anchor="middle">PASHTUN ASSOCIATION</textPath>
+  </text>
+</svg>
