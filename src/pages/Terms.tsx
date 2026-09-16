@@ -162,7 +162,7 @@ function Terms() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Terms and Conditions of Membership</h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Australian Pashtun Association (APA) - ABN: **29856472593** <br />
+                Australian Pashtun Association (APA) - ABN: **58 572 415 422** <br />
                 Unincorporated Not-for-Profit Association Registered in New South Wales
             </p>
           </div>
