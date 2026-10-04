@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import HtmlEmbed from "../components/HtmlEmbed";
+import { useZeffyScript } from "../hooks/useZeffyScript";
 import { supabase } from "../lib/supabase";
 import type { Tables } from "../types/supabase";
 
@@ -30,6 +31,8 @@ function EventDetails() {
       cancelled = true;
     };
   }, [id]);
+
+  useZeffyScript(!loading && !!event, [event?.id]);
 
   if (loading) {
     return (
@@ -91,8 +94,6 @@ function EventDetails() {
           <h1 className="text-2xl font-bold mb-4">{event.title}</h1>
           <p className="text-lg text-gray-700">{event.description}</p>
           <br />
-          {embed}
-
           <div className="bg-gray-50 p-6 rounded-lg mb-8">
             <p><strong>Date:</strong> {event.display_date}</p>
             <p><strong>Time:</strong> {timeRange}</p>
@@ -113,22 +114,9 @@ function EventDetails() {
         <h1 className="text-2xl font-bold mb-4">{event.title}</h1>
         <p className="text-lg text-gray-700">{event.description}</p>
         <br />
-        {event.donation_link && (
-          <form action="https://www.paypal.com/donate" method="post" target="_top" className="flex items-center gap-2">
-            <input type="hidden" name="campaign_id" value="LSA3FYW4TA82E" />
-            <button className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white align-center rounded-lg font-semibold hover:bg-green-700 transition-colors" title="PayPal - The safer, easier way to pay online!">
-              Donate and Register below
-            </button>
-            <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-            <p>You can also transfer to APA Donation account<br />
-              <strong>BSB:</strong> 012445 <br />
-              <strong>Account:</strong> 800288903
-            </p>
-          </form>
-        )}
-
         {embed}
-
+        <br />
+        Here is the event information:
         <div className="bg-gray-50 p-6 rounded-lg mb-8">
           <p><strong>Date:</strong> {event.display_date}</p>
           <p><strong>Time:</strong> {timeRange}</p>

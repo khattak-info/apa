@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import { Link } from "react-router-dom";
+import { useZeffyScript } from "../hooks/useZeffyScript";
 import { supabase } from "../lib/supabase";
 import type { Tables } from "../types/supabase";
 
@@ -42,18 +43,7 @@ function Events() {
     };
   }, []);
 
-  // Zeffy's script binds click handlers to [zeffy-form-link] elements once on load,
-  // so reload it whenever the rendered events change.
-  useEffect(() => {
-    if (loading) return;
-    const script = document.createElement("script");
-    script.src = "https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      script.remove();
-    };
-  }, [loading, events, selectedCategory]);
+  useZeffyScript(!loading, [events, selectedCategory]);
 
   const filteredEvents = selectedCategory === "All"
     ? events
@@ -163,8 +153,9 @@ function Events() {
                       {event.description}
                     </p>
 
-                    <div className="flex items-center justify-between">
-                      {event.registration_url ? (
+                    <Link to={`/events/${event.legacy_id ?? event.id}`}>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2 cursor-pointer hover:text-green-700">
+                        {event.registration_url ? (
                         event.registration_url.includes("zeffy.com") ? (
                           <button
                             type="button"
@@ -173,7 +164,7 @@ function Events() {
                           >
                             Request to Join
                           </button>
-                        ) : event.registration_url.includes("luma.com") || event.registration_url.includes("lu.ma") ? (
+                        ) : event.registration_url.includes("zeffy.com") || event.registration_url.includes("luma.com") || event.registration_url.includes("lu.ma") ? (
                           <a
                             href={"/events/" + (event.legacy_id ?? event.id)}
                             className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
@@ -192,7 +183,9 @@ function Events() {
                       ) : (
                         <button disabled></button>
                       )}
-
+                      </h3>
+                    </Link>
+                    <div className="flex items-center justify-between">
                       {event.gallery_html && (
                         <Link to={`/gallery/${event.legacy_id ?? event.id}`}>
                           <button className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm">
