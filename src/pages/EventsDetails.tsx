@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout";
+import HtmlEmbed from "../components/HtmlEmbed";
 import { supabase } from "../lib/supabase";
 import type { Tables } from "../types/supabase";
 
@@ -57,6 +58,28 @@ function EventDetails() {
   const isClosed = deadline !== null && deadline < Date.now();
   const timeRange = `${event.start_time ?? ""}${event.end_time ? ` - ${event.end_time}` : ""}`;
 
+  const zeffyUrl = event.registration_url?.includes("zeffy.com") ? event.registration_url : null;
+  const zeffyEmbedUrl = zeffyUrl
+    ? zeffyUrl.split("?")[0].replace(/zeffy\.com\/(?:[a-z]{2}(?:-[A-Z]{2})?\/)?(?:embed\/)?/, "zeffy.com/embed/")
+    : null;
+  const embed = event.iframe_html ? (
+    <HtmlEmbed className="mt-8" html={event.iframe_html} />
+  ) : zeffyEmbedUrl ? (
+    <div className="mt-8">
+      <div className="relative w-full" style={{ height: "1000px" }}>
+        <iframe
+          title={`${event.title} registration`}
+          src={zeffyEmbedUrl}
+          className="absolute inset-0 w-full h-full border-0"
+          allow="payment"
+        />
+      </div>
+      <a href={zeffyUrl!} target="_blank" rel="noreferrer" className="text-green-700 hover:underline">
+        Open registration in a new tab
+      </a>
+    </div>
+  ) : null;
+
   if (isClosed) {
     return (
       <Layout>
@@ -68,9 +91,7 @@ function EventDetails() {
           <h1 className="text-2xl font-bold mb-4">{event.title}</h1>
           <p className="text-lg text-gray-700">{event.description}</p>
           <br />
-          {event.iframe_html && (
-            <div className="mt-8" dangerouslySetInnerHTML={{ __html: event.iframe_html }} />
-          )}
+          {embed}
 
           <div className="bg-gray-50 p-6 rounded-lg mb-8">
             <p><strong>Date:</strong> {event.display_date}</p>
@@ -96,7 +117,7 @@ function EventDetails() {
           <form action="https://www.paypal.com/donate" method="post" target="_top" className="flex items-center gap-2">
             <input type="hidden" name="campaign_id" value="LSA3FYW4TA82E" />
             <button className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white align-center rounded-lg font-semibold hover:bg-green-700 transition-colors" title="PayPal - The safer, easier way to pay online!">
-              Donate via Paypal and Register below
+              Donate and Register below
             </button>
             <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
             <p>You can also transfer to APA Donation account<br />
@@ -106,9 +127,7 @@ function EventDetails() {
           </form>
         )}
 
-        {event.iframe_html && (
-          <div className="mt-8" dangerouslySetInnerHTML={{ __html: event.iframe_html }} />
-        )}
+        {embed}
 
         <div className="bg-gray-50 p-6 rounded-lg mb-8">
           <p><strong>Date:</strong> {event.display_date}</p>

@@ -6,6 +6,13 @@ import type { Tables } from "../types/supabase";
 
 type EventRow = Tables<"events">;
 
+function zeffyModalUrl(url: string) {
+  const base = url
+    .split("?")[0]
+    .replace(/zeffy\.com\/(?:[a-z]{2}(?:-[A-Z]{2})?\/)?(?:embed\/)?/, "zeffy.com/embed/");
+  return `${base}?modal=true`;
+}
+
 function Events() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [events, setEvents] = useState<EventRow[]>([]);
@@ -34,6 +41,19 @@ function Events() {
       cancelled = true;
     };
   }, []);
+
+  // Zeffy's script binds click handlers to [zeffy-form-link] elements once on load,
+  // so reload it whenever the rendered events change.
+  useEffect(() => {
+    if (loading) return;
+    const script = document.createElement("script");
+    script.src = "https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      script.remove();
+    };
+  }, [loading, events, selectedCategory]);
 
   const filteredEvents = selectedCategory === "All"
     ? events
@@ -145,7 +165,15 @@ function Events() {
 
                     <div className="flex items-center justify-between">
                       {event.registration_url ? (
-                        event.registration_url.includes("luma.com") || event.registration_url.includes("lu.ma") ? (
+                        event.registration_url.includes("zeffy.com") ? (
+                          <button
+                            type="button"
+                            className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
+                            {...{ "zeffy-form-link": zeffyModalUrl(event.registration_url) }}
+                          >
+                            Request to Join
+                          </button>
+                        ) : event.registration_url.includes("luma.com") || event.registration_url.includes("lu.ma") ? (
                           <a
                             href={"/events/" + (event.legacy_id ?? event.id)}
                             className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
