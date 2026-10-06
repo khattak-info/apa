@@ -18,8 +18,12 @@ function prepareEmbed(html: string): string {
     doc.querySelectorAll<HTMLIFrameElement>("iframe[data-zeffy-embed-src]").forEach((frame) => {
         frame.setAttribute("src", frame.getAttribute("data-zeffy-embed-src") ?? "");
     });
+    doc.querySelectorAll<HTMLIFrameElement>("iframe").forEach((frame) => {
+        frame.style.height = "100%";
+        frame.style.width = "100%";
+    });
     return doc.body.innerHTML;
-    }
+}
 
     function EventDetails() {
     const { id } = useParams();
