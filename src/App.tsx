@@ -12,6 +12,7 @@ import Terms from "./pages/Terms";
 import Members from "./pages/Members";
 import EventsDetails from "./pages/EventsDetails";
 import EventsGallery from "./pages/EventsGallery";
+import EventDetails from "./pages/EventDetails"
 
 import { AuthProvider } from "./admin/AuthContext";
 import { RequireRole } from "./admin/RequireRole";
@@ -34,6 +35,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/:id" element={<EventsDetails />} />
+          <Route path="/event/:id" element={<EventDetails />} />
           <Route path="/donations" element={<Donations />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/membership" element={<Membership />} />
