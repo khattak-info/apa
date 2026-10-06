@@ -5,43 +5,6 @@ import { useZeffyScript } from "../hooks/useZeffyScript";
 import { supabase } from "../lib/supabase";
 import type { Tables } from "../types/supabase";
 
-import React from 'react';
-
-interface ZeffyEmbedProps {
-formId: string;
-formType?: 'donation-form' | 'ticketing' | 'membership';
-locale?: string;
-title?: string;
-}
-
-export const ZeffyEmbed: React.FC<ZeffyEmbedProps> = ({
-formId,
-formType = 'donation-form',
-locale = 'en',
-title = 'Zeffy Fundraising Form'
-}) => {
-const embedUrl = `https://www.zeffy.com/embed/ticketing/pashtun-culture-day`;
-
-return (
-<div style={{ width: '100%', minHeight: '600px', overflow: 'hidden' }}>
-    <iframe
-    title={title}
-    src={embedUrl}
-    allow="payment"
-    style={{
-        width: '100%',
-        height: '100%',
-        minHeight: '600px',
-        border: 'none',
-    }}
-    />
-</div>
-);
-};
-
-
-
-
 type EventRow = Tables<"events">;
 
 // innerHTML never runs <script>, and the fallback iframe only has data-zeffy-embed-src,
@@ -84,7 +47,6 @@ function prepareEmbed(html: string): string {
 
     // The head script only binds to buttons present at page load, so re-run it once the button renders.
     useZeffyScript(!loading && !!event, [event?.id]);
-
     
 
     const embedHtml = useMemo(
@@ -153,14 +115,6 @@ function prepareEmbed(html: string): string {
             &rarr; Registration Link if the doesn't load
             </Link>
             <br />
-            <button
-                type="button"
-                className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors"
-                {...{ "zeffy-form-link": "https://www.zeffy.com/embed/ticketing/pashtun-culture-day?modal=true" }}
-            >
-                Register Now
-            </button>
-            
             {embedHtml && <div className="mt-8" dangerouslySetInnerHTML={{ __html: embedHtml }} />}
             <br />
             Here is the event information:
