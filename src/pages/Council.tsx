@@ -154,7 +154,7 @@ function Council() {
                         className="w-full h-56 object-contain bg-gray-200"
                       />
 
-                      <div className="absolute top-4 left-4">
+                      <div className="absolute bottom-4 left-4">
                         <span className={`px-3 py-1 rounded-full text-xs font-semibold shadow-md ${member.role === "President" ? "bg-green-700 text-white" :
                           member.role === "Vice President" || member.role === "Senior Vice President" ? "bg-blue-600 text-white" :
                             member.role === "Treasurer/Finance Secretary" ? "bg-purple-600 text-white" :
