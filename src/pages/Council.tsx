@@ -151,7 +151,7 @@ function Council() {
                       <img
                         src={member.photo_url || `https://placehold.co/400x400/10B981/ffffff?text=${getInitials(member.name)}`}
                         alt={`Profile of ${member.name}`}
-                        className="w-full h-56 object-cover bg-gray-200"
+                        className="w-full h-56 object-contain bg-gray-200"
                       />
 
                       <div className="absolute top-4 left-4">
